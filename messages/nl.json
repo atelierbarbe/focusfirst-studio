@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "Focus First — Digital Lab",
+    "description": "Van eerste gesprek tot werkend prototype, in 6 tot 8 weken."
+  },
+  "nav": {
+    "process": "Aanpak",
+    "work": "Werk",
+    "audiences": "Voor wie",
+    "pricing": "Prijzen",
+    "about": "Over ons",
+    "contact": "Neem contact op"
+  },
+  "hero": {
+    "eyebrow": "Digital Lab",
+    "title": "Focus First",
+    "tagline": "AI is een versneller. Kennis en aanpak bepalen de richting.",
+    "subtitle": "We combineren beide om sneller van idee naar werkend proof of concept te komen — zonder in te leveren op kwaliteit.",
+    "cta": "Laten we praten"
+  },
+  "process": {
+    "eyebrow": "Zo werken we",
+    "steps": [
+      {
+        "step": "01",
+        "timeline": "",
+        "title": "Analyse",
+        "description": "Voor elk idee is een digitale oplossing mogelijk. We onderzoeken je concept en bepalen samen de snelste route naar een werkend resultaat."
+      },
+      {
+        "step": "02",
+        "timeline": "",
+        "title": "Bouwen + testen",
+        "description": "We bouwen in korte cycli, testen met echte gebruikers, en sturen vroeg bij. Met AI als accelerator krijg je sneller iets werkends zonder concessies op kwaliteit."
+      },
+      {
+        "step": "03",
+        "timeline": "",
+        "title": "Go Live + assistance",
+        "description": "We brengen het project live en blijven de eerste 30 dagen aan je zijde en optimaliseren waar nodig. Nadien kunnen we je blijven bijstaan voor onderhoud en up to date houden van je digitale infrastructuur zodat je project steeds de beste gebruikservaring krijgt."
+      }
+    ]
+  },
+  "caseStudies": {
+    "eyebrow": "Wat we eerder bouwden",
+    "viewLabel": "Bekijk case study",
+    "items": [
+      {
+        "slug": "treepin",
+        "title": "Bomeninspecties voor gemeente Maldegem",
+        "description": "Bomen inspecteren gebeurde met klimmen en losse spreadsheets. Nu doet een GIS-app met mobiele veldinvoer het werk, automatisch gesynchroniseerd. Kosten per inspectie: van €50–150 naar €10–30."
+      },
+      {
+        "slug": "tagalong",
+        "title": "Tagbeheer voor SketchUp-architecten",
+        "description": "Architecten hielden tags handmatig bij, los van hun model. Tagalong synchroniseert ze realtime tussen model en team — zo'n 90% sneller dan de oude manier."
+      },
+      {
+        "slug": "iot-water-meters",
+        "title": "Waterverbruik volgen op de bouwplaats",
+        "description": "Watermeters werden met de hand afgelezen. Met LoRaWAN, gps en een dashboard zien projectleiders het verbruik nu live, zonder rondes langs de meter."
+      }
+    ],
+    "detail": {
+      "backLabel": "Terug naar werk",
+      "contextLabel": "Context",
+      "problemLabel": "Probleem",
+      "approachLabel": "Aanpak",
+      "solutionLabel": "Oplossing",
+      "outcomeLabel": "Resultaat",
+      "screenshotsLabel": "Schermafbeeldingen",
+      "screenshotPlaceholder": "Screenshot volgt",
+      "linkLabel": "Bekijk project",
+      "otherLabel": "Andere case studies"
+    },
+    "pages": {
+      "treepin": {
+        "context": "Gemeente Maldegem beheert duizenden bomen verspreid over haar grondgebied. Periodieke inspecties zijn wettelijk verplicht en bepalen onderhoud, veiligheid en aansprakelijkheid.",
+        "problem": "Bomen inspecteren gebeurde met klimmen, foto's en losse Excel-bestanden. Er was geen centraal overzicht en geen historiek per boom, en elke inspectie kostte tussen €50 en €150.",
+        "approach": "We brachten in kaart welke data er al bestond — locatie, soort, laatste inspectie — en waar het vastliep: alles leefde op papier of in geïsoleerde bestanden, niets was doorzoekbaar of gekoppeld aan een kaart.",
+        "solution": "Een GIS-native app met mobiele veldinvoer. Inspecteurs voeren data in ter plaatse, alles synchroniseert automatisch naar een centrale kaart. Vervolgacties worden geprioriteerd op basis van risico.",
+        "outcome": "Gemeente Maldegem digitaliseert nu boominspecties structureel. Kosten per inspectie daalden van €50–150 naar €10–30, en de gemeente heeft voor het eerst een actueel overzicht van haar volledige bomenbestand."
+      },
+      "tagalong": {
+        "context": "Architectenbureaus werken in SketchUp met honderden objecten en tags per project — materialen, faseringen, disciplines.",
+        "problem": "Tags werden handmatig bijgehouden, los van het model. Bij wijzigingen liep de tagstructuur snel uit de pas, en teamleden werkten met verouderde informatie.",
+        "approach": "We keken naar hoe tagdata zich verhoudt tot het model zelf en waar de synchronisatie brak: er was geen koppeling tussen wat in het model zat en wat het team zag in rapportages of exports.",
+        "solution": "Een SketchUp-plugin gekoppeld aan een webbackoffice, met realtime tagsynchronisatie. Teams zien dezelfde actuele structuur, met exports naar Excel, PDF en web.",
+        "outcome": "Ontwerpstudio's gebruiken Tagalong nu voor tagbeheer over meerdere projecten tegelijk — ongeveer 90% sneller dan de vorige, handmatige aanpak."
+      },
+      "iot-water-meters": {
+        "context": "Op bouwplaatsen worden tijdelijke watermeters geplaatst voor facturatie en verbruiksopvolging.",
+        "problem": "Meterstanden werden handmatig afgelezen — foutgevoelig, tijdrovend, en vaak de bron van discussie bij facturatie.",
+        "approach": "We onderzochten welke data al beschikbaar was per aansluiting en hoe die met minimale hardware automatisch verzameld kon worden, zonder telkens iemand ter plaatse te sturen.",
+        "solution": "LoRaWAN-sensoren gekoppeld aan gps en een clouddashboard. Projectleiders zien verbruik per locatie in real-time, zonder rondes langs de meter.",
+        "outcome": "Beta getest op 3 bouwplaatsen. Al binnen de eerste maand: minder discussie over facturatie en een snellere doorlooptijd van facturen."
+      }
+    }
+  },
+  "audiences": {
+    "eyebrow": "Voor wie",
+    "intro": "Wil je processen digitaliseren? Een thematisch interactief platform bouwen? Of eerst een idee testen voordat je erin investeert? Focus First is een digitale accelerator die je hierbij helpt — met de juiste kennis, aanpak en AI als versneller.",
+    "examplesLabel": "Denk aan",
+    "examples": [
+      "Een vergunningenplatform",
+      "Een interactieve kaart voor bezoekers",
+      "Een intern dashboard voor procesopvolging",
+      "Een proof of concept voor investeerders"
+    ],
+    "items": [
+      {
+        "name": "Publieke sector",
+        "description": "Gemeenten, agentschappen en overheidsinstellingen.",
+        "proposals": [
+          "Assetbeheer digitaliseren — wegen, groen, gebouwen",
+          "Een vergunnings- of meldingsproces stroomlijnen",
+          "Data uit losse spreadsheets samenbrengen in één overzicht"
+        ]
+      },
+      {
+        "name": "Private sector",
+        "description": "Bedrijven, KMO's, startups en non-profits.",
+        "proposals": [
+          "Een idee testen voordat je een team aanneemt",
+          "Een handmatig proces automatiseren",
+          "Sensordata of hardware integreren in je workflow"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Duidelijke prijzen",
+    "intro": "Geef elk idee een kans. Focus First biedt betaalbare oplossingen om op korte termijn tot een werkend resultaat te komen.",
+    "ctaLabel": "Scope je project",
+    "typeLabel": "Soort project",
+    "priceNote": "* Prijsindicatie — een preciezere inschatting volgt na de eerste analyse.",
+    "tiers": [
+      {
+        "name": "Basic",
+        "price": "€ 3 tot 5 K",
+        "duration": "2–3 weken",
+        "description": "Van een eenvoudige website tot een losstaande automatisering of plugin.",
+        "features": ["2–3 weken doorlooptijd", "Vaste prijs vooraf", "Code is van jou"]
+      },
+      {
+        "name": "Digital+",
+        "price": "€ 8 tot 12 K",
+        "duration": "6 weken",
+        "description": "Van eerste prototype tot een volledig werkend proof of concept.",
+        "features": ["6 weken doorlooptijd", "Analyse, bouw en oplevering", "30 dagen support inbegrepen"]
+      },
+      {
+        "name": "Smart+",
+        "price": "€ 15 tot 25 K",
+        "duration": "8 weken",
+        "description": "Slimme full-stack platformen met AI-integratie. Van analyse tot volledige uitwerking.",
+        "features": ["8 weken doorlooptijd", "Hardware- en IoT-integratie", "30 dagen support inbegrepen"]
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Over ons",
+    "bio": "Focus First is een digital lab waar we processen digitaliseren en ideeën omzetten in werkende oplossingen. We verbinden alle digitale tools tot een eenheid die je idee tot een werkende realiteit brengt — databases, payment processors, data platforms, alles waar je project behoefte aan heeft. Met een hands-on aanpak: klein beginnen, snel iets werkends neerzetten, en van daaruit verfijnen. We begrijpen hoe tools samenwerken en bouwen projecten die groeien naarmate jouw vraag groeit.",
+    "email": "jonathan@focusfirst.studio",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "contactCta": "Vertel me over je project"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Vertel me over je project",
+    "subtitle": "Beantwoord drie korte vragen en je krijgt meteen een eerste inschatting. Daarna stuur je je gegevens door — we reageren persoonlijk.",
+    "serviceIntro": "Focus First biedt ook de tools aan om je digitale projecten op de rails te zetten: domeinnamen, hosting, databases, API-integraties. Bij een eerste analyse krijg je een volledig gedocumenteerd voorstel hoe we je ideeën online tot leven brengen.",
+    "intake": {
+      "orgLabel": "Wat voor organisatie ben je?",
+      "orgOptions": [
+        { "value": "public", "label": "Publieke sector" },
+        { "value": "company", "label": "Bedrijf of KMO" },
+        { "value": "startup", "label": "Startup" },
+        { "value": "nonprofit", "label": "Non-profit" }
+      ],
+      "scopeLabel": "Wat wil je testen of bouwen?",
+      "scopeOptions": [
+        { "value": "quick", "tierName": "Basic", "label": "Een klein, afgebakend stuk werk — koppeling, script of dashboard" },
+        { "value": "mvp", "tierName": "Digital+", "label": "Een volledig prototype, front- en backend" },
+        { "value": "smart", "tierName": "Smart+", "label": "Iets met hardware of complexere integraties" }
+      ],
+      "timelineLabel": "Wanneer wil je van start?",
+      "timelineOptions": [
+        { "value": "asap", "label": "Zo snel mogelijk" },
+        { "value": "months", "label": "Binnen 1–2 maanden" },
+        { "value": "exploring", "label": "Ik verken nog opties" }
+      ],
+      "estimateHeading": "Eerste inschatting",
+      "estimatePlaceholder": "Kies hierboven een scope om een inschatting te zien.",
+      "estimateDuration": "doorlooptijd",
+      "estimateNote": "Dit is een eerste richtprijs — de exacte scope bepalen we samen.",
+      "formNameLabel": "Naam",
+      "formEmailLabel": "E-mail",
+      "formMessageLabel": "Vertel kort over je project",
+      "formMessagePlaceholder": "Waar loop je tegenaan, en wat zou je willen testen?",
+      "formSubmitLabel": "Verstuur via e-mail",
+      "formNote": "Dit opent je e-mailprogramma met alles al ingevuld — er wordt niets automatisch verstuurd.",
+      "formSubject": "Nieuwe projectaanvraag via focusfirst.studio"
+    }
+  },
+  "footer": {
+    "copyright": "Focus First Digital Lab."
+  }
+}

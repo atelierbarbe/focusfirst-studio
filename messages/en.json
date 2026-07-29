@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "Focus First — Digital Lab",
+    "description": "From first conversation to working prototype, in 6 to 8 weeks."
+  },
+  "nav": {
+    "process": "Process",
+    "work": "Work",
+    "audiences": "Who it's for",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "Digital Lab",
+    "title": "Focus First",
+    "tagline": "AI is an accelerator. Knowledge and approach set the direction.",
+    "subtitle": "We combine both to get from idea to a working proof of concept faster — without cutting corners on quality.",
+    "cta": "Let's talk"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "steps": [
+      {
+        "step": "01",
+        "timeline": "",
+        "title": "Analysis",
+        "description": "Every idea deserves a digital solution. We explore your concept and figure out together the fastest path to a working result."
+      },
+      {
+        "step": "02",
+        "timeline": "",
+        "title": "Build + test",
+        "description": "We build in short cycles, test with real users, and steer early. With AI as an accelerator, you get something working faster without compromising on quality."
+      },
+      {
+        "step": "03",
+        "timeline": "",
+        "title": "Go Live + support",
+        "description": "We ship your project live and stay with you for the first 30 days, optimizing where needed. Beyond that, we can continue supporting you with maintenance and keeping your digital infrastructure current—so your project always delivers the best user experience."
+      }
+    ]
+  },
+  "caseStudies": {
+    "eyebrow": "What we've built before",
+    "viewLabel": "View case study",
+    "items": [
+      {
+        "slug": "treepin",
+        "title": "Tree inspections for the city of Maldegem",
+        "description": "Inspecting trees meant climbing and loose spreadsheets. Now a GIS app with mobile field entry does the work, synced automatically. Cost per inspection: down from €50–150 to €10–30."
+      },
+      {
+        "slug": "tagalong",
+        "title": "Tag management for SketchUp architects",
+        "description": "Architects kept tags in sync by hand, disconnected from the model. Tagalong syncs them in real time between model and team — around 90% faster than doing it manually."
+      },
+      {
+        "slug": "iot-water-meters",
+        "title": "Tracking water use on construction sites",
+        "description": "Water meters were read by hand. With LoRaWAN, GPS, and a dashboard, project managers now see usage live, without walking the site."
+      }
+    ],
+    "detail": {
+      "backLabel": "Back to work",
+      "contextLabel": "Context",
+      "problemLabel": "Problem",
+      "approachLabel": "Approach",
+      "solutionLabel": "Solution",
+      "outcomeLabel": "Outcome",
+      "screenshotsLabel": "Screenshots",
+      "screenshotPlaceholder": "Screenshot coming soon",
+      "linkLabel": "View project",
+      "otherLabel": "Other case studies"
+    },
+    "pages": {
+      "treepin": {
+        "context": "The city of Maldegem manages thousands of trees spread across its territory. Periodic inspections are legally required and determine maintenance, safety, and liability.",
+        "problem": "Inspecting trees meant climbing, photos, and loose Excel files. There was no central overview or history per tree, and each inspection cost between €50 and €150.",
+        "approach": "We mapped out what data already existed — location, species, last inspection — and where it broke down: everything lived on paper or in isolated files, none of it searchable or tied to a map.",
+        "solution": "A GIS-native app with mobile field entry. Inspectors enter data on-site, everything syncs automatically to a central map. Follow-up actions get prioritized based on risk.",
+        "outcome": "The city of Maldegem now digitizes tree inspections structurally. Cost per inspection dropped from €50–150 to €10–30, and the city has, for the first time, an up-to-date overview of its entire tree stock."
+      },
+      "tagalong": {
+        "context": "Architecture firms work in SketchUp with hundreds of objects and tags per project — materials, phasing, disciplines.",
+        "problem": "Tags were kept in sync by hand, disconnected from the model. With every change, the tag structure drifted, and team members worked off outdated information.",
+        "approach": "We looked at how tag data related to the model itself and where the sync broke down: there was no link between what lived in the model and what the team saw in reports or exports.",
+        "solution": "A SketchUp plugin connected to a web backoffice, with real-time tag sync. Teams see the same up-to-date structure, with exports to Excel, PDF, and web.",
+        "outcome": "Design studios now use Tagalong for tag management across multiple projects at once — around 90% faster than the previous, manual approach."
+      },
+      "iot-water-meters": {
+        "context": "Construction sites install temporary water meters for billing and usage tracking.",
+        "problem": "Meter readings were taken by hand — error-prone, time-consuming, and often the source of billing disputes.",
+        "approach": "We looked at what data was already available per connection and how it could be collected automatically with minimal hardware, without sending someone on-site every time.",
+        "solution": "LoRaWAN sensors connected to GPS and a cloud dashboard. Project managers see usage per location in real time, without walking the site.",
+        "outcome": "Beta tested on 3 construction sites. Within the first month: fewer billing disputes and faster invoice turnaround."
+      }
+    }
+  },
+  "audiences": {
+    "eyebrow": "Who it's for",
+    "intro": "Want to digitize processes? Build a themed interactive platform? Or test an idea before investing in it? Focus First is a digital accelerator that helps you get there — with the right knowledge, approach, and AI as an accelerator.",
+    "examplesLabel": "Think of",
+    "examples": [
+      "A permitting platform",
+      "An interactive map for visitors",
+      "An internal dashboard for tracking processes",
+      "A proof of concept for investors"
+    ],
+    "items": [
+      {
+        "name": "Public sector",
+        "description": "Municipalities, agencies, and government institutions.",
+        "proposals": [
+          "Digitize asset management — roads, greenery, buildings",
+          "Streamline a permitting or reporting process",
+          "Bring data from scattered spreadsheets into one overview"
+        ]
+      },
+      {
+        "name": "Private sector",
+        "description": "Companies, SMEs, startups, and nonprofits.",
+        "proposals": [
+          "Test an idea before you hire a team",
+          "Automate a manual process",
+          "Integrate sensor data or hardware into your workflow"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Clear pricing",
+    "intro": "Give every idea a chance. Focus First offers affordable solutions to reach a working result on short notice.",
+    "ctaLabel": "Scope your project",
+    "typeLabel": "Project type",
+    "priceNote": "* Price indication — a more precise estimate follows after the initial analysis.",
+    "tiers": [
+      {
+        "name": "Basic",
+        "price": "€ 3 to 5 K",
+        "duration": "2–3 weeks",
+        "description": "From a simple website to a standalone automation or plugin.",
+        "features": ["2–3 week turnaround", "Fixed price upfront", "Code is yours"]
+      },
+      {
+        "name": "Digital+",
+        "price": "€ 8 to 12 K",
+        "duration": "6 weeks",
+        "description": "From first prototype to a fully working proof of concept.",
+        "features": ["6 week build", "Analysis, build, and delivery", "30 days of support included"]
+      },
+      {
+        "name": "Smart+",
+        "price": "€ 15 to 25 K",
+        "duration": "8 weeks",
+        "description": "Intelligent full-stack platforms with AI integration. From analysis to complete build-out.",
+        "features": ["8 week build", "Hardware and IoT integration", "30 days of support included"]
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "bio": "Focus First is a digital lab where we digitalize processes and turn ideas into working solutions. We connect all digital tools into one unified system that brings your idea to life — databases, payment processors, data platforms, whatever your project needs. With a hands-on approach: start small, get something working fast, refine from there. We understand how tools work together and build projects that grow as your needs do.",
+    "email": "jonathan@focusfirst.studio",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "contactCta": "Tell me about your project"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell me about your project",
+    "subtitle": "Answer three quick questions and get an instant estimate. Then send over your details — we reply personally.",
+    "serviceIntro": "Focus First also provides the tools to get your digital projects off the ground: domain names, hosting, databases, API integrations. After an initial analysis, you'll get a fully documented proposal on how we can bring your ideas online.",
+    "intake": {
+      "orgLabel": "What kind of organization are you?",
+      "orgOptions": [
+        { "value": "public", "label": "Public sector" },
+        { "value": "company", "label": "Company or SME" },
+        { "value": "startup", "label": "Startup" },
+        { "value": "nonprofit", "label": "Nonprofit" }
+      ],
+      "scopeLabel": "What do you want to test or build?",
+      "scopeOptions": [
+        { "value": "quick", "tierName": "Basic", "label": "One small, well-defined piece of work — integration, script, or dashboard" },
+        { "value": "mvp", "tierName": "Digital+", "label": "A full prototype, front and back end" },
+        { "value": "smart", "tierName": "Smart+", "label": "Something with hardware or more complex integrations" }
+      ],
+      "timelineLabel": "When do you want to start?",
+      "timelineOptions": [
+        { "value": "asap", "label": "As soon as possible" },
+        { "value": "months", "label": "Within 1–2 months" },
+        { "value": "exploring", "label": "Still exploring options" }
+      ],
+      "estimateHeading": "First estimate",
+      "estimatePlaceholder": "Pick a scope above to see an estimate.",
+      "estimateDuration": "turnaround",
+      "estimateNote": "This is a first ballpark — we'll pin down the exact scope together.",
+      "formNameLabel": "Name",
+      "formEmailLabel": "Email",
+      "formMessageLabel": "Tell me briefly about your project",
+      "formMessagePlaceholder": "What are you running into, and what would you like to test?",
+      "formSubmitLabel": "Send via email",
+      "formNote": "This opens your email app with everything filled in — nothing is sent automatically.",
+      "formSubject": "New project inquiry via focusfirst.studio"
+    }
+  },
+  "footer": {
+    "copyright": "Focus First Digital Lab."
+  }
+}
