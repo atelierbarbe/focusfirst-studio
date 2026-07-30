@@ -47,13 +47,13 @@
     "items": [
       {
         "slug": "treepin",
-        "title": "Bomeninspecties voor gemeente Maldegem",
-        "description": "Bomen inspecteren gebeurde met klimmen en losse spreadsheets. Nu doet een GIS-app met mobiele veldinvoer het werk, automatisch gesynchroniseerd. Kosten per inspectie: van €50–150 naar €10–30."
+        "title": "Boominspecties voor Greenlightbeheer",
+        "description": "Inspecteurs werkten met papier en gps. Treepin is een tablet-app (Next.js + Capacitor) met offline sync, Mapbox-kaart en Supabase auth. Inspecties van €50–150 naar €10–30, klanten zien live inzage."
       },
       {
-        "slug": "tagalong",
-        "title": "Tagbeheer voor SketchUp-architecten",
-        "description": "Architecten hielden tags handmatig bij, los van hun model. Tagalong synchroniseert ze realtime tussen model en team — zo'n 90% sneller dan de oude manier."
+        "slug": "multiplugin",
+        "title": "Kastenbouw-automatisering in SketchUp",
+        "description": "Meubelmakers tekenden plannen handmatig uit. Multiplugin is een SketchUp Ruby-plugin die van massabox naar parametrisch corpus, fronten en productiedata gaat. Platform backend via Next.js + Supabase."
       },
       {
         "slug": "iot-water-meters",
@@ -75,25 +75,25 @@
     },
     "pages": {
       "treepin": {
-        "context": "Gemeente Maldegem beheert duizenden bomen verspreid over haar grondgebied. Periodieke inspecties zijn wettelijk verplicht en bepalen onderhoud, veiligheid en aansprakelijkheid.",
-        "problem": "Bomen inspecteren gebeurde met klimmen, foto's en losse Excel-bestanden. Er was geen centraal overzicht en geen historiek per boom, en elke inspectie kostte tussen €50 en €150.",
-        "approach": "We brachten in kaart welke data er al bestond — locatie, soort, laatste inspectie — en waar het vastliep: alles leefde op papier of in geïsoleerde bestanden, niets was doorzoekbaar of gekoppeld aan een kaart.",
-        "solution": "Een GIS-native app met mobiele veldinvoer. Inspecteurs voeren data in ter plaatse, alles synchroniseert automatisch naar een centrale kaart. Vervolgacties worden geprioriteerd op basis van risico.",
-        "outcome": "Gemeente Maldegem digitaliseert nu boominspecties structureel. Kosten per inspectie daalden van €50–150 naar €10–30, en de gemeente heeft voor het eerst een actueel overzicht van haar volledige bomenbestand."
+        "context": "Greenlightbeheer is een gespecialiseerde boombeheer-dienst die duizenden bomen inspecteert voor gemeentes, particulieren en bedrijven. Inspecteurs werken ter plaatse; beheerders plannen vervolgacties; klanten (gemeentes) willen inzage in hun bomenbestand.",
+        "problem": "Inspecteurs werkten met papier, camera en GPS-notities. Geen centraal overzicht, geen historiek per boom, geen risicoprioritisatie. Data moest handmatig getypt worden, waardoor fouten ontstonden. Klanten konden niet inzien wat er gebeurde. Elke inspectie kostte €50–150 door inefficiëntie.",
+        "approach": "We keken hoe veldwerk werkt: inspecteurs moeten offline kunnen werken, data synchroniseert als ze terug zijn, kaarten helpen met routeplanning, beheerders zien real-time status. Keuze: Next.js webapp (desktop/tablet), Capacitor voor offline tablet-modus, Supabase voor auth + real-time sync, Mapbox voor geovisualisatie.",
+        "solution": "Next.js 16 webapp met React 19, TypeScript, Tailwind CSS. Capacitor 8 voor Android tablet-app (offline-capable, keep-awake). Supabase backend (PostgreSQL, Auth, RLS, Realtime). Mapbox GL + Leaflet voor kaartvisualisatie. Foto-upload via Resend; optioneel Google Cloud Vision voor analyse. Rolenbeheer (technicus/beheerder/klant read-only), audit logs. Stack: Next.js 16 + React 19 + Capacitor 8 + Supabase + Mapbox GL.",
+        "outcome": "Greenlightbeheer digitaliseert boominspecties volledig. Inspecteurs voeren ter plaatse in; data synchroniseert real-time. Kosten per inspectie daalden van €50–150 naar €10–30. Beheerders zien live status en kunnen routespanning optimaliseren. Klanten (waaronder gemeente Maldegem) hebben een actueel, doorzoekbaar overzicht met risicoprioritisatie en vervolgacties automatisch ingepland. Volledige audit trail voor compliance."
       },
-      "tagalong": {
-        "context": "Architectenbureaus werken in SketchUp met honderden objecten en tags per project — materialen, faseringen, disciplines.",
-        "problem": "Tags werden handmatig bijgehouden, los van het model. Bij wijzigingen liep de tagstructuur snel uit de pas, en teamleden werkten met verouderde informatie.",
-        "approach": "We keken naar hoe tagdata zich verhoudt tot het model zelf en waar de synchronisatie brak: er was geen koppeling tussen wat in het model zat en wat het team zag in rapportages of exports.",
-        "solution": "Een SketchUp-plugin gekoppeld aan een webbackoffice, met realtime tagsynchronisatie. Teams zien dezelfde actuele structuur, met exports naar Excel, PDF en web.",
-        "outcome": "Ontwerpstudio's gebruiken Tagalong nu voor tagbeheer over meerdere projecten tegelijk — ongeveer 90% sneller dan de vorige, handmatige aanpak."
+      "multiplugin": {
+        "context": "Meubelmakers werken in SketchUp: van massabox (klantvoorstel) naar gedetailleerde technische uitwerking. Fronten, leggers, sokkel, boringen — alles moet parametrisch zijn en exporteren naar productiedata.",
+        "problem": "Uitwerking gebeurde handmatig: kopieën van componenten, aanpassen per maat, geen template-systeem. Fouten slopen snel in; geen koppeling tussen ontwerp en productielijst. Elke variant moest opnieuw ontworpen worden. Geen gestandaardiseerde tagstructuur voor productie.",
+        "approach": "We bouwden een SketchUp-plugin die van massabox automatisch parametrisch corpus, fronten, leggers en sokkel genereert. Tags markeren componenten; een webplatform beheert materialen en instellingen. Plugin synchroniseert via API met backend.",
+        "solution": "SketchUp Ruby-plugin (v1.2.0) met automatisering van kastenbouw-logica. Wizard-interface in HTML/CSS/Ruby voor componentkeuze. Supabase backend (PostgreSQL) voor materiaalbibliotheek. Multiplugin Platform (Next.js 16, TypeScript, Tailwind, Supabase Auth, RLS) als webinterface. Plugin sync via REST API (JWT auth). Exports naar snapshots en BOM. Stack: SketchUp Ruby + Next.js 16 + Supabase + PostgREST.",
+        "outcome": "Meubelmakers reduceren ontwerptime per project drastisch. Van massabox naar complete technische uitwerking nu volledig geautomatiseerd. Materiaalbibliotheek centraal beheerd; wijzigingen propageren naar alle projecten. Productiedata (BOM, boringen, afmetingen) automatisch gegenereerd zonder handmatige foutgevoelige stappen."
       },
       "iot-water-meters": {
-        "context": "Op bouwplaatsen worden tijdelijke watermeters geplaatst voor facturatie en verbruiksopvolging.",
-        "problem": "Meterstanden werden handmatig afgelezen — foutgevoelig, tijdrovend, en vaak de bron van discussie bij facturatie.",
-        "approach": "We onderzochten welke data al beschikbaar was per aansluiting en hoe die met minimale hardware automatisch verzameld kon worden, zonder telkens iemand ter plaatse te sturen.",
-        "solution": "LoRaWAN-sensoren gekoppeld aan gps en een clouddashboard. Projectleiders zien verbruik per locatie in real-time, zonder rondes langs de meter.",
-        "outcome": "Beta getest op 3 bouwplaatsen. Al binnen de eerste maand: minder discussie over facturatie en een snellere doorlooptijd van facturen."
+        "context": "Op bouwplaatsen worden tijdelijke watermeters geplaatst voor facturatie en verbruiksopvolging. Projecten draaien maanden, en waterverbruik fluctueert sterk per fase — dus nauwkeurige metingen zijn essentieel voor correcte facturatie en budgetbewaking.",
+        "problem": "Meterstanden werden handmatig afgelezen — foutgevoelig, tijdrovend, en een veelvoorkomende bron van geschil bij facturatie. Projectleiders zagen alleen dagcijfers, niet real-time verbruik of anomalieën.",
+        "approach": "We onderzochten welke sensordata al beschikbaar was per meter, hoe die automatisch verzameld kon worden met minimale hardware, en hoe live inzicht mogelijk was zonder telkens iemand ter plaatse te sturen. Gekozen voor lage-energiesensoren en cloudopslag.",
+        "solution": "LoRaWAN-sensoren (elk met ingebouwde GPS) op elke meter, verbonden via bestaande LoRa-gateways, geparsed naar AWS IoT Core en visualiseerd in een custom React dashboard. Anomaliedetectie met threshold-alerts. Backend: Node.js, PostgreSQL, MapBox voor GPS-visualisatie.",
+        "outcome": "Beta getest op 3 bouwplaatsen over 8 weken. Al in de eerste maand: minder facturatiegeschillen (data is nu feitelijk en gedateerd), snellere factuurverwerking, en projectleiders zien real-time verbruikspatronen zodat ze kunnen ingrijpen als iets afwijkt."
       }
     }
   },

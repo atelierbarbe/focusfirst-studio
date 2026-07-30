@@ -47,13 +47,13 @@
     "items": [
       {
         "slug": "treepin",
-        "title": "Tree inspections for the city of Maldegem",
-        "description": "Inspecting trees meant climbing and loose spreadsheets. Now a GIS app with mobile field entry does the work, synced automatically. Cost per inspection: down from €50–150 to €10–30."
+        "title": "Tree inspections for Greenlightbeheer",
+        "description": "Inspectors worked with paper and GPS notes. Treepin is a tablet app (Next.js + Capacitor) with offline sync, Mapbox maps, and Supabase auth. Inspections: from €50–150 down to €10–30, clients see live insights."
       },
       {
-        "slug": "tagalong",
-        "title": "Tag management for SketchUp architects",
-        "description": "Architects kept tags in sync by hand, disconnected from the model. Tagalong syncs them in real time between model and team — around 90% faster than doing it manually."
+        "slug": "multiplugin",
+        "title": "Cabinet construction automation in SketchUp",
+        "description": "Furniture makers hand-designed technical specs. Multiplugin is a SketchUp Ruby plugin that auto-generates parametric cabinets, fronts, shelves, and production data. Platform backend via Next.js + Supabase."
       },
       {
         "slug": "iot-water-meters",
@@ -75,25 +75,25 @@
     },
     "pages": {
       "treepin": {
-        "context": "The city of Maldegem manages thousands of trees spread across its territory. Periodic inspections are legally required and determine maintenance, safety, and liability.",
-        "problem": "Inspecting trees meant climbing, photos, and loose Excel files. There was no central overview or history per tree, and each inspection cost between €50 and €150.",
-        "approach": "We mapped out what data already existed — location, species, last inspection — and where it broke down: everything lived on paper or in isolated files, none of it searchable or tied to a map.",
-        "solution": "A GIS-native app with mobile field entry. Inspectors enter data on-site, everything syncs automatically to a central map. Follow-up actions get prioritized based on risk.",
-        "outcome": "The city of Maldegem now digitizes tree inspections structurally. Cost per inspection dropped from €50–150 to €10–30, and the city has, for the first time, an up-to-date overview of its entire tree stock."
+        "context": "Greenlightbeheer is a specialized tree care service that inspects thousands of trees for municipalities, private landowners, and companies. Inspectors work in the field; managers plan follow-up actions; clients (municipalities) want visibility into their tree inventory.",
+        "problem": "Inspectors worked with paper, camera, and GPS notes. No central overview, no per-tree history, no risk prioritization. Data had to be hand-entered, causing errors. Clients couldn't see what was happening. Each inspection cost €50–150 due to inefficiency.",
+        "approach": "We examined how fieldwork actually operates: inspectors must work offline, data syncs when they return, maps help with route planning, managers need real-time status. Choice: Next.js webapp (desktop/tablet), Capacitor for offline tablet mode, Supabase for auth + real-time sync, Mapbox for geo-visualization.",
+        "solution": "Next.js 16 webapp with React 19, TypeScript, Tailwind CSS. Capacitor 8 for Android tablet app (offline-capable, keep-awake). Supabase backend (PostgreSQL, Auth, RLS, Realtime). Mapbox GL + Leaflet for map visualization. Photo upload via Resend; optional Google Cloud Vision for analysis. Role management (technician/manager/client read-only), audit logs. Stack: Next.js 16 + React 19 + Capacitor 8 + Supabase + Mapbox GL.",
+        "outcome": "Greenlightbeheer fully digitizes tree inspections. Inspectors enter data on-site; data syncs in real-time. Cost per inspection dropped from €50–150 to €10–30. Managers see live status and can optimize route planning. Clients (including city of Maldegem) now have an up-to-date, searchable inventory with risk prioritization and automatic follow-up scheduling. Complete audit trail for compliance."
       },
-      "tagalong": {
-        "context": "Architecture firms work in SketchUp with hundreds of objects and tags per project — materials, phasing, disciplines.",
-        "problem": "Tags were kept in sync by hand, disconnected from the model. With every change, the tag structure drifted, and team members worked off outdated information.",
-        "approach": "We looked at how tag data related to the model itself and where the sync broke down: there was no link between what lived in the model and what the team saw in reports or exports.",
-        "solution": "A SketchUp plugin connected to a web backoffice, with real-time tag sync. Teams see the same up-to-date structure, with exports to Excel, PDF, and web.",
-        "outcome": "Design studios now use Tagalong for tag management across multiple projects at once — around 90% faster than the previous, manual approach."
+      "multiplugin": {
+        "context": "Furniture makers work in SketchUp: from mass box (client proposal) to detailed technical spec. Fronts, shelves, base, hole placement — everything must be parametric and export to production data.",
+        "problem": "Design was done manually: copy components, tweak per size, no template system. Errors crept in; no link between design and production list. Each variant required redesign from scratch. No standardized tag structure for manufacturing.",
+        "approach": "We built a SketchUp plugin that auto-generates parametric cabinet, fronts, shelves, and base from a mass box. Tags mark components; a web platform manages materials and settings. Plugin syncs via API with backend.",
+        "solution": "SketchUp Ruby plugin (v1.2.0) with cabinet construction automation logic. Wizard UI in HTML/CSS/Ruby for component selection. Supabase backend (PostgreSQL) for material library. Multiplugin Platform (Next.js 16, TypeScript, Tailwind, Supabase Auth, RLS) as web interface. Plugin syncs via REST API (JWT auth). Exports to snapshots and BOM. Stack: SketchUp Ruby + Next.js 16 + Supabase + PostgREST.",
+        "outcome": "Furniture makers drastically reduce design time per project. From mass box to complete technical spec now fully automated. Material library centrally managed; changes propagate to all projects. Production data (BOM, hole placement, dimensions) auto-generated without manual error-prone steps."
       },
       "iot-water-meters": {
-        "context": "Construction sites install temporary water meters for billing and usage tracking.",
-        "problem": "Meter readings were taken by hand — error-prone, time-consuming, and often the source of billing disputes.",
-        "approach": "We looked at what data was already available per connection and how it could be collected automatically with minimal hardware, without sending someone on-site every time.",
-        "solution": "LoRaWAN sensors connected to GPS and a cloud dashboard. Project managers see usage per location in real time, without walking the site.",
-        "outcome": "Beta tested on 3 construction sites. Within the first month: fewer billing disputes and faster invoice turnaround."
+        "context": "Construction sites install temporary water meters for billing and usage tracking. Projects run for months, and water consumption fluctuates by phase — so accurate readings are essential for correct billing and budget control.",
+        "problem": "Meter readings were taken by hand — error-prone, time-consuming, and a common source of billing disputes. Project managers only saw daily figures, not real-time usage or anomalies.",
+        "approach": "We explored what sensor data was already available per meter, how it could be collected automatically with minimal hardware, and how live insight was possible without on-site visits. We chose low-power sensors and cloud storage.",
+        "solution": "LoRaWAN sensors (each with built-in GPS) on every meter, connected via existing LoRa gateways, parsed to AWS IoT Core and visualized in a custom React dashboard. Anomaly detection with threshold alerts. Backend: Node.js, PostgreSQL, MapBox for GPS visualization.",
+        "outcome": "Beta tested on 3 construction sites over 8 weeks. Within the first month: fewer billing disputes (data is now factual and timestamped), faster invoice processing, and project managers see real-time consumption patterns so they can intervene when something's off."
       }
     }
   },
