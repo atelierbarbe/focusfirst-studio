@@ -1,6 +1,5 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "jonathan@focusfirst.studio";
 
 interface ContactFormData {
@@ -19,6 +18,15 @@ interface ContactFormData {
 
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not configured");
+      return Response.json(
+        { error: "Email service is not configured" },
+        { status: 503 }
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const data: ContactFormData = await request.json();
 
     const emailBody = [
