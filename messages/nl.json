@@ -200,8 +200,12 @@
       "formMessageLabel": "Vertel kort over je project",
       "formMessagePlaceholder": "Waar loop je tegenaan, en wat zou je willen testen?",
       "formSubmitLabel": "Verstuur via e-mail",
-      "formNote": "Dit opent je e-mailprogramma met alles al ingevuld — er wordt niets automatisch verstuurd.",
-      "formSubject": "Nieuwe projectaanvraag via focusfirst.studio"
+      "formNote": "Emails worden veilig verstuurd via Resend.",
+      "formSubject": "Nieuwe projectaanvraag via focusfirst.studio",
+      "consentLabel": "Ik ga akkoord met",
+      "consentPrivacy": "het privacybeleid",
+      "consentTerms": "de algemene voorwaarden",
+      "consentRequired": "Accepteer beide voorwaarden om door te gaan"
     }
   },
   "footer": {

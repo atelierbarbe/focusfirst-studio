@@ -200,8 +200,12 @@
       "formMessageLabel": "Tell me briefly about your project",
       "formMessagePlaceholder": "What are you running into, and what would you like to test?",
       "formSubmitLabel": "Send via email",
-      "formNote": "This opens your email app with everything filled in — nothing is sent automatically.",
-      "formSubject": "New project inquiry via focusfirst.studio"
+      "formNote": "Emails are sent securely via Resend.",
+      "formSubject": "New project inquiry via focusfirst.studio",
+      "consentLabel": "I agree to",
+      "consentPrivacy": "the privacy policy",
+      "consentTerms": "the terms of service",
+      "consentRequired": "Accept both terms to continue"
     }
   },
   "footer": {

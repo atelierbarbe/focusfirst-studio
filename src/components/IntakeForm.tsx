@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
@@ -55,6 +55,7 @@ function RadioGroup({
 export default function IntakeForm() {
   const t = useTranslations("contact.intake");
   const tPricing = useTranslations("pricing");
+  const locale = useLocale();
 
   const orgOptions = t.raw("orgOptions") as Option[];
   const scopeOptions = t.raw("scopeOptions") as ScopeOption[];
@@ -69,6 +70,8 @@ export default function IntakeForm() {
   const [message, setMessage] = useState("");
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [submitError, setSubmitError] = useState("");
+  const [consentPrivacy, setConsentPrivacy] = useState(false);
+  const [consentTerms, setConsentTerms] = useState(false);
 
   const selectedScope = scopeOptions.find((o) => o.value === scope);
   const matchedTier = selectedScope
@@ -80,6 +83,11 @@ export default function IntakeForm() {
 
     if (!org || !scope || !timeline || !name || !email || !message) {
       setSubmitError("Please fill in all fields");
+      return;
+    }
+
+    if (!consentPrivacy || !consentTerms) {
+      setSubmitError(t("consentRequired"));
       return;
     }
 
@@ -215,6 +223,46 @@ export default function IntakeForm() {
           onChange={(e) => setMessage(e.target.value)}
           className="mt-2 w-full rounded border border-light-gray bg-white px-4 py-3 text-sm text-near-black outline-none transition-colors focus:border-near-black"
         />
+      </div>
+
+      <div className="space-y-3 rounded-lg border border-light-gray bg-light-gray/40 p-4">
+        <p className="text-sm font-semibold text-near-black">{t("consentLabel")}</p>
+        <label className="flex items-start gap-3">
+          <input
+            type="checkbox"
+            checked={consentPrivacy}
+            onChange={(e) => setConsentPrivacy(e.target.checked)}
+            className="mt-1"
+          />
+          <span className="text-sm text-dark-gray">
+            <a
+              href={`/${locale}/privacy`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-near-black hover:underline"
+            >
+              {t("consentPrivacy")}
+            </a>
+          </span>
+        </label>
+        <label className="flex items-start gap-3">
+          <input
+            type="checkbox"
+            checked={consentTerms}
+            onChange={(e) => setConsentTerms(e.target.checked)}
+            className="mt-1"
+          />
+          <span className="text-sm text-dark-gray">
+            <a
+              href={`/${locale}/terms`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-near-black hover:underline"
+            >
+              {t("consentTerms")}
+            </a>
+          </span>
+        </label>
       </div>
 
       <div>
