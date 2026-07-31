@@ -205,6 +205,114 @@
     }
   },
   "footer": {
-    "copyright": "Focus First Digital Lab."
+    "copyright": "Focus First Digital Lab.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "July 31, 2026",
+      "sections": [
+        {
+          "heading": "1. Introduction",
+          "content": "Focus First respects your privacy. This privacy policy describes how we collect, use, and protect personal data."
+        },
+        {
+          "heading": "2. Data Controller",
+          "content": "Focus First Digital Lab is responsible for processing your personal data. Contact: jonathan@focusfirst.studio"
+        },
+        {
+          "heading": "3. Data We Collect",
+          "content": "We collect data you voluntarily provide through contact forms. This includes: name, email address, organization type, project description."
+        },
+        {
+          "heading": "4. How We Use Your Data",
+          "content": "Your data is used to: contact you about your project, send quotes, and execute projects. We do not share your data with third parties without consent."
+        },
+        {
+          "heading": "5. Cookies and Tracking",
+          "content": "We use cookies for Google Analytics (aggregated data, with your consent) and session data. You can refuse cookies in your browser settings."
+        },
+        {
+          "heading": "6. Your Rights (GDPR)",
+          "content": "You have the right to view, correct, or delete your data. Contact us at jonathan@focusfirst.studio."
+        },
+        {
+          "heading": "7. Retention Period",
+          "content": "We retain contact information as long as needed for the project and up to 1 year afterward, unless you request deletion."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "July 31, 2026",
+      "sections": [
+        {
+          "heading": "1. Applicability",
+          "content": "These terms apply to all services from Focus First Digital Lab."
+        },
+        {
+          "heading": "2. Quotes and Contracts",
+          "content": "Quotes are non-binding. A project begins after written confirmation and contract signature."
+        },
+        {
+          "heading": "3. Payment",
+          "content": "Payments follow the terms stated in the project contract. Focus First reserves the right to stop work if payment is not made."
+        },
+        {
+          "heading": "4. Intellectual Property Rights",
+          "content": "Delivered code and designs are owned by the client after full payment."
+        },
+        {
+          "heading": "5. Support and Warranty",
+          "content": "30 days of post-launch support is included in Digital+ and Smart+ packages. Afterward, support is available on a project basis."
+        },
+        {
+          "heading": "6. Liability",
+          "content": "Focus First is not liable for indirect damages. Direct liability is limited to the project fee."
+        },
+        {
+          "heading": "7. Changes",
+          "content": "Scope or timeline changes are possible and will be billed separately."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "lastUpdated": "July 31, 2026",
+      "sections": [
+        {
+          "heading": "1. What Are Cookies?",
+          "content": "Cookies are small text files stored on your device to track your browsing behavior and improve your experience."
+        },
+        {
+          "heading": "2. Types of Cookies We Use",
+          "content": "Essential: for site functionality (session). Analytics (with consent): Google Analytics for anonymous usage statistics. Marketing: no marketing cookies."
+        },
+        {
+          "heading": "3. Google Analytics",
+          "content": "We use Google Analytics (GA4) to collect aggregated site usage data. This helps us improve the site. IP addresses are anonymized."
+        },
+        {
+          "heading": "4. Your Choice",
+          "content": "You can accept or reject cookies via the cookie banner on first visit. You can change this preference later in browser settings."
+        },
+        {
+          "heading": "5. Optimization",
+          "content": "Accept cookies for a better experience. This is always optional."
+        }
+      ]
+    }
+  },
+  "cookies": {
+    "banner": {
+      "title": "We respect your privacy",
+      "description": "We use cookies for essential functionality and analytics (with your consent). This helps us improve the site.",
+      "acceptAll": "Accept all",
+      "rejectAll": "Essential only",
+      "link": "Learn more"
+    }
   }
 }

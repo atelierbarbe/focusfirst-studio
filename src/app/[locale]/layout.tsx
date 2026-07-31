@@ -7,6 +7,8 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const inter = Inter({
@@ -55,12 +57,16 @@ export default async function RootLayout({
       lang={locale}
       className={`${inter.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="min-h-full flex flex-col bg-cream text-near-black font-sans">
         <AnimatedBackground />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

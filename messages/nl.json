@@ -205,6 +205,114 @@
     }
   },
   "footer": {
-    "copyright": "Focus First Digital Lab."
+    "copyright": "Focus First Digital Lab.",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "cookies": "Cookies"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacybeleid",
+      "lastUpdated": "31 juli 2026",
+      "sections": [
+        {
+          "heading": "1. Inleiding",
+          "content": "Focus First respecteert uw privacy. Dit privacybeleid beschrijft hoe we persoonlijke gegevens verzamelen, gebruiken en beschermen."
+        },
+        {
+          "heading": "2. Verantwoordelijke",
+          "content": "Focus First Digital Lab is verantwoordelijk voor de verwerking van uw persoonlijke gegevens. Contact: jonathan@focusfirst.studio"
+        },
+        {
+          "heading": "3. Gegevens die we verzamelen",
+          "content": "We verzamelen gegevens die u vrijwillig verstrekt via contactformulieren. Dit omvat: naam, e-mailadres, organisatietype, projectbeschrijving."
+        },
+        {
+          "heading": "4. Hoe we uw gegevens gebruiken",
+          "content": "Uw gegevens worden gebruikt om: contact met u op te nemen over uw project, een offerte te versturen, en projecten uit te voeren. We delen uw gegevens niet met derden zonder toestemming."
+        },
+        {
+          "heading": "5. Cookies en tracking",
+          "content": "We gebruiken cookies voor Google Analytics (geaggregeerde data, met uw toestemming) en sessiegegevens. U kunt cookies weigeren via uw browserinstellingen."
+        },
+        {
+          "heading": "6. Uw rechten (GDPR)",
+          "content": "U heeft het recht om uw gegevens in te zien, te corrigeren of te verwijderen. Contacteer ons op jonathan@focusfirst.studio."
+        },
+        {
+          "heading": "7. Bewaarduur",
+          "content": "We bewaren contactgegevens zolang nodig voor het project en tot 1 jaar daarna, tenzij u om verwijdering verzoekt."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden",
+      "lastUpdated": "31 juli 2026",
+      "sections": [
+        {
+          "heading": "1. Geldigheid",
+          "content": "Deze voorwaarden gelden voor alle diensten van Focus First Digital Lab."
+        },
+        {
+          "heading": "2. Offertes en contracten",
+          "content": "Offertes zijn vrijblijvend. Een project begint na schriftelijke bevestiging en ondertekening van het contract."
+        },
+        {
+          "heading": "3. Betaling",
+          "content": "Betalingen verlopen volgens de gestelde voorwaarden in het projectcontract. Focus First behoudt zich het recht voor werk stop te zetten bij niet-betaling."
+        },
+        {
+          "heading": "4. Eigendom intellectuele rechten",
+          "content": "De opgeleverde code en ontwerpen zijn eigendom van de klant na volledige betaling."
+        },
+        {
+          "heading": "5. Support en garantie",
+          "content": "30 dagen postlancering support is inbegrepen in Digital+ en Smart+ pakketten. Daarna is support op projectbasis beschikbaar."
+        },
+        {
+          "heading": "6. Aansprakelijkheid",
+          "content": "Focus First is niet aansprakelijk voor indirecte schade. Directe schadevergoeding is beperkt tot het projecttarief."
+        },
+        {
+          "heading": "7. Wijzigingen",
+          "content": "Wijzigingen van scope of timeline zijn mogelijk en zullen apart gefactureerd worden."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookiebeleid",
+      "lastUpdated": "31 juli 2026",
+      "sections": [
+        {
+          "heading": "1. Wat zijn cookies?",
+          "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen om uw browsergedrag bij te houden en uw ervaring te verbeteren."
+        },
+        {
+          "heading": "2. Soorten cookies die we gebruiken",
+          "content": "Essentieel: voor sitewerking (sessie). Analytics (met toestemming): Google Analytics voor anonieme gebruikersstatistieken. Marketing: geen marketing cookies."
+        },
+        {
+          "heading": "3. Google Analytics",
+          "content": "We gebruiken Google Analytics (GA4) om geaggregeerde sitegebruiksdata te verzamelen. Dit helpt ons de site te verbeteren. IP-adressen worden geanonimiseerd."
+        },
+        {
+          "heading": "4. Uw keuze",
+          "content": "U kunt cookies accepteren of weigeren via het cookiebannerje bij eerste bezoek. U kunt deze voorkeur later wijzigen in browserinstellingen."
+        },
+        {
+          "heading": "5. Optimalanally",
+          "content": "Accepteer cookies voor een betere ervaring. Dit is altijd optioneel."
+        }
+      ]
+    }
+  },
+  "cookies": {
+    "banner": {
+      "title": "We respecteren uw privacy",
+      "description": "We gebruiken cookies voor essentiële functionaliteit en analytics (met uw toestemming). Dit helpt ons de site te verbeteren.",
+      "acceptAll": "Accepteer alles",
+      "rejectAll": "Alleen essentieel",
+      "link": "Meer informatie"
+    }
   }
 }

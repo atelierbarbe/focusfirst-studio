@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
+type SubmitStatus = "idle" | "loading" | "success" | "error";
+
 type Option = { value: string; label: string };
 type ScopeOption = Option & { tierName: string };
 type Tier = {
@@ -65,34 +67,68 @@ export default function IntakeForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
+  const [submitError, setSubmitError] = useState("");
 
   const selectedScope = scopeOptions.find((o) => o.value === scope);
   const matchedTier = selectedScope
     ? tiers.find((tier) => tier.name === selectedScope.tierName)
     : undefined;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!org || !scope || !timeline || !name || !email || !message) {
+      setSubmitError("Please fill in all fields");
+      return;
+    }
+
+    setSubmitStatus("loading");
+    setSubmitError("");
+
     const orgLabel = orgOptions.find((o) => o.value === org)?.label ?? "";
     const scopeLabel = selectedScope?.label ?? "";
     const timelineLabel =
       timelineOptions.find((o) => o.value === timeline)?.label ?? "";
 
-    const bodyLines = [
-      `${t("orgLabel")} ${orgLabel}`,
-      `${t("scopeLabel")} ${scopeLabel}`,
-      `${t("timelineLabel")} ${timelineLabel}`,
-      matchedTier ? `${t("estimateHeading")}: ${matchedTier.name} (${matchedTier.price})` : "",
-      "",
-      `${t("formNameLabel")}: ${name}`,
-      `${t("formEmailLabel")}: ${email}`,
-      "",
-      message,
-    ].filter(Boolean);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          org,
+          scope,
+          timeline,
+          name,
+          email,
+          message,
+          orgLabel,
+          scopeLabel,
+          timelineLabel,
+          tierName: matchedTier?.name,
+          tierPrice: matchedTier?.price,
+        }),
+      });
 
-    const subject = encodeURIComponent(t("formSubject"));
-    const body = encodeURIComponent(bodyLines.join("\n"));
-    window.location.href = `mailto:jonathan@focusfirst.studio?subject=${subject}&body=${body}`;
+      if (!response.ok) {
+        throw new Error("Failed to send inquiry");
+      }
+
+      setSubmitStatus("success");
+      setOrg("");
+      setScope("");
+      setTimeline("");
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      setTimeout(() => setSubmitStatus("idle"), 5000);
+    } catch (error) {
+      setSubmitStatus("error");
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to send inquiry"
+      );
+    }
   };
 
   return (
@@ -184,11 +220,31 @@ export default function IntakeForm() {
       <div>
         <button
           type="submit"
-          className="inline-flex items-center rounded bg-near-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark-gray"
+          disabled={submitStatus === "loading"}
+          className="inline-flex items-center rounded bg-near-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark-gray disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {t("formSubmitLabel")}
+          {submitStatus === "loading" ? "Sending..." : t("formSubmitLabel")}
         </button>
-        <p className="mt-3 text-xs text-medium-gray">{t("formNote")}</p>
+
+        {submitStatus === "success" && (
+          <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-4">
+            <p className="text-sm text-green-800">
+              ✓ Thanks! We've received your inquiry and will be in touch within 24 hours.
+            </p>
+          </div>
+        )}
+
+        {submitStatus === "error" && (
+          <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
+            <p className="text-sm text-red-800">
+              ✗ Error: {submitError}. Please try again.
+            </p>
+          </div>
+        )}
+
+        <p className="mt-3 text-xs text-medium-gray">
+          Emails are sent securely via Resend.
+        </p>
       </div>
     </form>
   );
