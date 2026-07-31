@@ -70,8 +70,7 @@ export default function IntakeForm() {
   const [message, setMessage] = useState("");
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [submitError, setSubmitError] = useState("");
-  const [consentPrivacy, setConsentPrivacy] = useState(false);
-  const [consentTerms, setConsentTerms] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   const selectedScope = scopeOptions.find((o) => o.value === scope);
   const matchedTier = selectedScope
@@ -86,7 +85,7 @@ export default function IntakeForm() {
       return;
     }
 
-    if (!consentPrivacy || !consentTerms) {
+    if (!consent) {
       setSubmitError(t("consentRequired"));
       return;
     }
@@ -129,6 +128,7 @@ export default function IntakeForm() {
       setName("");
       setEmail("");
       setMessage("");
+      setConsent(false);
 
       setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
@@ -225,45 +225,36 @@ export default function IntakeForm() {
         />
       </div>
 
-      <div className="space-y-3 rounded-lg border border-light-gray bg-light-gray/40 p-4">
-        <p className="text-sm font-semibold text-near-black">{t("consentLabel")}</p>
-        <label className="flex items-start gap-3">
-          <input
-            type="checkbox"
-            checked={consentPrivacy}
-            onChange={(e) => setConsentPrivacy(e.target.checked)}
-            className="mt-1"
-          />
-          <span className="text-sm text-dark-gray">
-            <a
-              href={`/${locale}/privacy`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-near-black hover:underline"
-            >
-              {t("consentPrivacy")}
-            </a>
-          </span>
-        </label>
-        <label className="flex items-start gap-3">
-          <input
-            type="checkbox"
-            checked={consentTerms}
-            onChange={(e) => setConsentTerms(e.target.checked)}
-            className="mt-1"
-          />
-          <span className="text-sm text-dark-gray">
-            <a
-              href={`/${locale}/terms`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-near-black hover:underline"
-            >
-              {t("consentTerms")}
-            </a>
-          </span>
-        </label>
-      </div>
+      <label className="flex items-start gap-3 rounded-lg border border-light-gray bg-light-gray/40 p-4">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-1 flex-shrink-0"
+          required
+        />
+        <span className="text-sm text-dark-gray leading-relaxed">
+          {t("consentLabel")}{" "}
+          <a
+            href={`/${locale}/privacy`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-near-black hover:underline"
+          >
+            {t("consentLabelLink1")}
+          </a>
+          {" en "}{" "}
+          <a
+            href={`/${locale}/cookies`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-near-black hover:underline"
+          >
+            {t("consentLabelLink2")}
+          </a>
+          .
+        </span>
+      </label>
 
       <div>
         <button

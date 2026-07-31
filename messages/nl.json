@@ -202,10 +202,10 @@
       "formSubmitLabel": "Verstuur via e-mail",
       "formNote": "Emails worden veilig verstuurd via Resend.",
       "formSubject": "Nieuwe projectaanvraag via focusfirst.studio",
-      "consentLabel": "Ik ga akkoord met",
-      "consentPrivacy": "het privacybeleid",
-      "consentTerms": "de algemene voorwaarden",
-      "consentRequired": "Accepteer beide voorwaarden om door te gaan"
+      "consentLabel": "Ik ga akkoord met de verwerking van mijn contactgegevens door Focus First Digital Lab om mijn vraag te beantwoorden. Dit is los van cookie-instellingen voor website-statistieken. Meer info in het",
+      "consentLabelLink1": "privacybeleid",
+      "consentLabelLink2": "cookiebeleid",
+      "consentRequired": "Accepteer de verwerking van je contactgegevens om door te gaan"
     }
   },
   "footer": {

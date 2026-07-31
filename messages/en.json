@@ -202,10 +202,10 @@
       "formSubmitLabel": "Send via email",
       "formNote": "Emails are sent securely via Resend.",
       "formSubject": "New project inquiry via focusfirst.studio",
-      "consentLabel": "I agree to",
-      "consentPrivacy": "the privacy policy",
-      "consentTerms": "the terms of service",
-      "consentRequired": "Accept both terms to continue"
+      "consentLabel": "I agree to Focus First Digital Lab processing my contact information to answer my question. This is separate from cookie settings for website statistics. More info in the",
+      "consentLabelLink1": "privacy policy",
+      "consentLabelLink2": "cookie policy",
+      "consentRequired": "Accept the processing of your contact information to continue"
     }
   },
   "footer": {
