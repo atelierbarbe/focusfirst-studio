@@ -209,11 +209,33 @@
   },
   "about": {
     "eyebrow": "Over ons",
-    "bio": "Focus First is een digital lab waar we processen digitaliseren en ideeën omzetten in werkende oplossingen. We verbinden alle digitale tools tot een eenheid die je idee tot een werkende realiteit brengt — databases, payment processors, data platforms, alles waar je project behoefte aan heeft. Met een hands-on aanpak: klein beginnen, snel iets werkends neerzetten, en van daaruit verfijnen. We begrijpen hoe tools samenwerken en bouwen projecten die groeien naarmate jouw vraag groeit.",
+    "title": "Elk idee verdient een eerlijke kans",
+    "lead": "Focus First is een digital lab. We helpen bedenkers — van KMO tot publieke dienst — hun idee snel en scherp te testen in een werkend proof of concept.",
+    "principles": [
+      {
+        "title": "Focus houden",
+        "description": "We snijden scope tot wat telt: één belofte, één prototype, geen omwegen. Zo blijft het idee scherp genoeg om écht te leren."
+      },
+      {
+        "title": "Elke bedenker een kans",
+        "description": "Goede ideeën komen niet alleen uit grote organisaties. We maken de weg naar een eerste werkende versie toegankelijk — ook als je klein begint."
+      },
+      {
+        "title": "AI als versneller",
+        "description": "Vooruitgang in AI maakt sneller bouwen haalbaar. Dat opent ruimte voor meer experimenten — zonder in te leveren op kwaliteit of richting."
+      }
+    ],
+    "howWeWorkTitle": "Hoe we werken",
+    "howWeWork": "We verbinden databases, API’s, data platforms en andere tools tot één geheel. Klein starten, snel iets werkends neerzetten, daarna verfijnen. Projecten die meegroeien met jouw vraag.",
+    "howWeWorkPoints": [
+      "Integraties die tools laten samenwerken",
+      "Proof of concept in weken, niet maanden",
+      "Bouwen dat kan meegroeien met de vraag"
+    ],
     "email": "info@focusfirst.be",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
-    "contactCta": "Vertel me over je project"
+    "contactCta": "Vertel ons over je project"
   },
   "contact": {
     "eyebrow": "Contact",

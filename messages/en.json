@@ -209,11 +209,33 @@
   },
   "about": {
     "eyebrow": "About",
-    "bio": "Focus First is a digital lab where we digitalize processes and turn ideas into working solutions. We connect all digital tools into one unified system that brings your idea to life — databases, payment processors, data platforms, whatever your project needs. With a hands-on approach: start small, get something working fast, refine from there. We understand how tools work together and build projects that grow as your needs do.",
+    "title": "Every idea deserves a fair chance",
+    "lead": "Focus First is a digital lab. We help idea owners — from SMEs to public services — test their concept quickly and sharply in a working proof of concept.",
+    "principles": [
+      {
+        "title": "Stay focused",
+        "description": "We cut scope to what matters: one promise, one prototype, no detours. That keeps the idea sharp enough to learn from for real."
+      },
+      {
+        "title": "A chance for every idea owner",
+        "description": "Good ideas don’t only come from large organizations. We make the path to a first working version accessible — even when you start small."
+      },
+      {
+        "title": "AI as an accelerator",
+        "description": "Progress in AI makes building faster achievable. That opens room for more experiments — without compromising quality or direction."
+      }
+    ],
+    "howWeWorkTitle": "How we work",
+    "howWeWork": "We connect databases, APIs, data platforms, and other tools into one whole. Start small, ship something working fast, then refine. Projects that grow with your needs.",
+    "howWeWorkPoints": [
+      "Integrations that make tools work together",
+      "Proof of concept in weeks, not months",
+      "Builds that can grow with the demand"
+    ],
     "email": "info@focusfirst.be",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
-    "contactCta": "Tell me about your project"
+    "contactCta": "Tell us about your project"
   },
   "contact": {
     "eyebrow": "Contact",

@@ -1,6 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Focus, Users, Zap } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
+
+const PRINCIPLE_ICONS = [Focus, Users, Zap] as const;
 
 type ProcessStep = {
   step: string;
@@ -16,6 +19,7 @@ type PricingTier = {
   description: string;
   features: string[];
 };
+type AboutPrinciple = { title: string; description: string };
 
 export default async function Home({
   params,
@@ -36,6 +40,8 @@ export default async function Home({
   const audiences = tAudiences.raw("items") as Audience[];
   const audienceExamples = tAudiences.raw("examples") as string[];
   const pricing = tPricing.raw("tiers") as PricingTier[];
+  const principles = tAbout.raw("principles") as AboutPrinciple[];
+  const howWeWorkPoints = tAbout.raw("howWeWorkPoints") as string[];
   const linkedInUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
   const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL;
 
@@ -241,45 +247,93 @@ export default async function Home({
       </section>
 
       {/* About */}
-      <section id="about" className="border-t border-light-gray">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <section id="about" className="border-t border-accent/20 bg-accent-light/40">
+        <div className="mx-auto max-w-6xl px-6 py-20 pb-24 md:py-28 md:pb-32">
           <Eyebrow>{tAbout("eyebrow")}</Eyebrow>
-          <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
-            <div className="md:col-span-2">
-              <p className="text-lg text-dark-gray">{tAbout("bio")}</p>
+          <h2 className="mt-6 max-w-2xl text-3xl font-bold tracking-[0.5px] text-near-black md:text-4xl">
+            {tAbout("title")}
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg text-dark-gray">
+            {tAbout("lead")}
+          </p>
+
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {principles.map((principle, index) => {
+              const Icon = PRINCIPLE_ICONS[index] ?? Focus;
+              return (
+                <div key={principle.title}>
+                  <Icon
+                    className="size-6 text-accent"
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                  />
+                  <h3 className="mt-4 text-lg font-semibold text-near-black">
+                    {principle.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-dark-gray">
+                    {principle.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-14 grid gap-8 rounded-lg bg-white p-8 md:grid-cols-[1.4fr_1fr] md:items-end md:gap-10 md:p-10">
+            <div>
+              <h3 className="text-lg font-semibold text-near-black">
+                {tAbout("howWeWorkTitle")}
+              </h3>
+              <p className="mt-3 text-dark-gray">{tAbout("howWeWork")}</p>
+              <ul className="mt-5 space-y-2">
+                {howWeWorkPoints.map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-2 text-sm text-dark-gray"
+                  >
+                    <span className="mt-1 text-accent" aria-hidden="true">
+                      →
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 md:items-end">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded bg-near-black px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-dark-gray"
+                className="inline-flex w-full items-center justify-center rounded bg-near-black px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-dark-gray md:w-auto"
               >
                 {tAbout("contactCta")}
               </Link>
               <a
                 href={`mailto:${tAbout("email")}`}
-                className="text-near-black underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+                className="text-sm text-near-black underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
               >
                 {tAbout("email")}
               </a>
-              {linkedInUrl && (
-                <a
-                  href={linkedInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark-gray hover:text-near-black"
-                >
-                  {tAbout("linkedinLabel")}
-                </a>
-              )}
-              {githubUrl && (
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark-gray hover:text-near-black"
-                >
-                  {tAbout("githubLabel")}
-                </a>
+              {(linkedInUrl || githubUrl) && (
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {linkedInUrl && (
+                    <a
+                      href={linkedInUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-dark-gray hover:text-near-black"
+                    >
+                      {tAbout("linkedinLabel")}
+                    </a>
+                  )}
+                  {githubUrl && (
+                    <a
+                      href={githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-dark-gray hover:text-near-black"
+                    >
+                      {tAbout("githubLabel")}
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           </div>

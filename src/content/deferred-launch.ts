@@ -28,7 +28,7 @@ export const deferredLaunchTasks: DeferredTask[] = [
     id: "ga-id",
     title: "Echte GA4 Measurement ID",
     detail:
-      "NEXT_PUBLIC_GA_ID=G-… instellen, DebugView controleren, Search Console koppelen.",
+      "Gezet: G-10YYK7SYH2 (Consent Mode v2). Nog: DebugView controleren + Search Console koppelen.",
     where: "Vercel env + Google Analytics",
   },
   {
