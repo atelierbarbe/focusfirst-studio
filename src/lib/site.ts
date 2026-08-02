@@ -6,6 +6,12 @@ export const SITE_NAME = "Focus First";
 
 export const CONTACT_EMAIL = "info@focusfirst.be";
 
+/** Display + tel: href (E.164 without spaces) */
+export const CONTACT_PHONE = {
+  display: "+32 475 43 73 43",
+  href: "+32475437343",
+} as const;
+
 /** Legal entity (eenmanszaak) — used in privacy / structured data */
 export const LEGAL_ENTITY = {
   name: "Jonathan Barbé",

@@ -1,4 +1,10 @@
-import { CONTACT_EMAIL, LEGAL_ENTITY, SITE_NAME, SITE_URL } from "@/lib/site";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  LEGAL_ENTITY,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
 
 export default function JsonLd({ locale }: { locale: string }) {
   const description =
@@ -16,6 +22,7 @@ export default function JsonLd({ locale }: { locale: string }) {
         legalName: LEGAL_ENTITY.name,
         url: SITE_URL,
         email: CONTACT_EMAIL,
+        telephone: CONTACT_PHONE.href,
         vatID: LEGAL_ENTITY.vat.replace(/\s/g, ""),
         description,
         address: {

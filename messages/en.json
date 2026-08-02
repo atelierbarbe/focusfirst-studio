@@ -40,7 +40,7 @@
     "eyebrow": "Digital Lab",
     "title": "Focus First",
     "tagline": "AI is an accelerator. Knowledge and approach set the direction.",
-    "subtitle": "We combine both to get from idea to a working proof of concept faster — without cutting corners on quality.",
+    "subtitle": "For all your digital projects, we combine both to get from idea to a working proof of concept faster — without cutting corners on quality.",
     "cta": "Let's talk"
   },
   "process": {
@@ -236,6 +236,7 @@
       "Builds that can grow with the demand"
     ],
     "email": "info@focusfirst.be",
+    "vatLabel": "VAT",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
     "contactCta": "Tell us about your project"

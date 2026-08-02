@@ -13,7 +13,6 @@ export default function Header() {
     { href: "/#process", label: t("process") },
     { href: "/#work", label: t("work") },
     { href: "/#audiences", label: t("audiences") },
-    { href: "/#pricing", label: t("pricing") },
     { href: "/blog", label: t("blog") },
     { href: "/#about", label: t("about") },
   ];
@@ -59,7 +58,7 @@ export default function Header() {
           <LocaleSwitcher />
           <Link
             href="/contact"
-            className="hidden rounded bg-near-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-dark-gray sm:inline-flex"
+            className="hidden rounded bg-[#FF00FF] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#D100D1] sm:inline-flex"
             onClick={closeMenu}
           >
             {t("contact")}
@@ -119,7 +118,7 @@ export default function Header() {
             <li className="pt-2">
               <Link
                 href="/contact"
-                className="block rounded bg-near-black px-4 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-dark-gray"
+                className="block rounded bg-[#FF00FF] px-4 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#D100D1]"
                 onClick={closeMenu}
               >
                 {t("contact")}

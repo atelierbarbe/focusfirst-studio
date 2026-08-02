@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
 import CaseStudiesCarousel from "@/components/CaseStudiesCarousel";
 import { caseMedia } from "@/content/case-media";
+import { CONTACT_PHONE, LEGAL_ENTITY } from "@/lib/site";
 
 const PRINCIPLE_ICONS = [Focus, Users, Zap] as const;
 
@@ -335,6 +336,23 @@ export default async function Home({
                   )}
                 </div>
               )}
+
+              <div className="mt-8 space-y-1 text-sm text-dark-gray md:mt-10 md:text-right">
+                <p className="font-semibold text-near-black">
+                  {LEGAL_ENTITY.name}
+                </p>
+                <p>
+                  {tAbout("vatLabel")} {LEGAL_ENTITY.vat}
+                </p>
+                <p>
+                  <a
+                    href={`tel:${CONTACT_PHONE.href}`}
+                    className="text-near-black underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+                  >
+                    {CONTACT_PHONE.display}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
