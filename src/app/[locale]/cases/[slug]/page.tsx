@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
 import { routing } from "@/i18n/routing";
-import nlMessages from "../../../../../messages/nl.json";
+import { buildMetadata } from "@/lib/metadata";
+import { CASE_SLUGS } from "@/lib/site";
+import { caseMedia } from "@/content/case-media";
 
 type CaseStudy = { slug: string; title: string; description: string };
 type CaseDetail = {
@@ -14,14 +18,30 @@ type CaseDetail = {
   outcome: string;
 };
 
-const caseSlugs = (nlMessages.caseStudies.items as CaseStudy[]).map(
-  (item) => item.slug
-);
-
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    caseSlugs.map((slug) => ({ locale, slug }))
+    CASE_SLUGS.map((slug) => ({ locale, slug }))
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const tCases = await getTranslations({ locale, namespace: "caseStudies" });
+  const items = tCases.raw("items") as CaseStudy[];
+  const item = items.find((i) => i.slug === slug);
+  if (!item) {
+    return {};
+  }
+  return buildMetadata({
+    locale,
+    path: `/cases/${slug}`,
+    title: item.title,
+    description: item.description,
+  });
 }
 
 export default async function CaseStudyPage({
@@ -42,7 +62,10 @@ export default async function CaseStudyPage({
     notFound();
   }
 
+  const media = caseMedia[slug];
+  const screenshots = media?.screenshots ?? [];
   const otherCases = items.filter((i) => i.slug !== slug);
+  const localeKey = locale === "en" ? "en" : "nl";
 
   const sections: { label: string; text: string }[] = [
     { label: tCases("detail.contextLabel"), text: detail.context },
@@ -72,26 +95,49 @@ export default async function CaseStudyPage({
             </p>
           </div>
 
-          {/* Screenshot placeholders */}
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {[0, 1].map((i) => (
-              <div
-                key={i}
-                className="flex aspect-video items-center justify-center rounded-lg border border-dashed border-medium-gray/50 bg-light-gray/40"
-              >
-                <span className="font-mono text-xs uppercase tracking-wider text-medium-gray">
-                  {tCases("detail.screenshotPlaceholder")}
-                </span>
-              </div>
-            ))}
-          </div>
+          {screenshots.length > 0 ? (
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {screenshots.map((shot) => (
+                <figure
+                  key={shot.src}
+                  className="overflow-hidden rounded-lg border border-light-gray bg-light-gray/40"
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt[localeKey]}
+                    width={1600}
+                    height={1000}
+                    className="h-auto w-full object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </figure>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {[0, 1].map((i) => (
+                <div
+                  key={i}
+                  className="flex aspect-video items-center justify-center rounded-lg border border-dashed border-medium-gray/50 bg-light-gray/40"
+                >
+                  <span className="font-mono text-xs uppercase tracking-wider text-medium-gray">
+                    {tCases("detail.screenshotPlaceholder")}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
 
-          <a
-            href="#"
-            className="mt-8 inline-flex items-center rounded bg-near-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark-gray"
-          >
-            {tCases("detail.linkLabel")} →
-          </a>
+          {media?.projectUrl && (
+            <a
+              href={media.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center rounded bg-near-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark-gray"
+            >
+              {tCases("detail.linkLabel")} →
+            </a>
+          )}
         </div>
       </section>
 

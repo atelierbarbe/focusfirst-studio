@@ -1,7 +1,18 @@
 {
   "metadata": {
-    "title": "Focus First — Digital Lab",
-    "description": "From first conversation to working prototype, in 6 to 8 weeks."
+    "siteName": "Focus First",
+    "title": "Focus First — AI-accelerated digital lab",
+    "description": "From idea to working proof of concept in 6–8 weeks. Analysis, build, test, and go-live with AI as an accelerator — without cutting corners on quality.",
+    "contactTitle": "Contact",
+    "contactDescription": "Tell us about your project and get a first estimate. Focus First Digital Lab — the fast path from concept to prototype.",
+    "privacyDescription": "How Focus First Digital Lab collects, uses, and protects personal data.",
+    "cookiesDescription": "Which cookies we use, why, and how you manage consent.",
+    "termsDescription": "Terms of service for Focus First Digital Lab.",
+    "blogTitle": "Blog",
+    "blogDescription": "Insights on conceptualizing faster, keeping focus, and the value of a digital proof of concept."
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
   },
   "nav": {
     "process": "Process",
@@ -9,7 +20,21 @@
     "audiences": "Who it's for",
     "pricing": "Pricing",
     "about": "About",
-    "contact": "Get in touch"
+    "blog": "Blog",
+    "contact": "Get in touch",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "blog": {
+    "eyebrow": "Insights",
+    "title": "Blog",
+    "subtitle": "Short pieces on focus, conceptualizing faster, and why a proof of concept pays off — reusable as a post or newsletter.",
+    "readLabel": "Read article",
+    "backLabel": "Back to blog",
+    "otherLabel": "More articles",
+    "ctaHeading": "Want to keep your idea sharp?",
+    "ctaBody": "Tell us briefly what you’re stuck on — we’ll help you stay focused and get to something working faster.",
+    "ctaLabel": "Get in touch"
   },
   "hero": {
     "eyebrow": "Digital Lab",
@@ -51,9 +76,19 @@
         "description": "Inspectors worked with paper and GPS notes. Treepin is a tablet app (Next.js + Capacitor) with offline sync, Mapbox maps, and Supabase auth. Inspections: from €50–150 down to €10–30, clients see live insights."
       },
       {
+        "slug": "studio-huis",
+        "title": "Website for Studio Huis",
+        "description": "A renovation advisory practice needed a clear digital presence. We built studiohuis.be: brand-first, clear services, and a low-friction contact path for homeowners."
+      },
+      {
+        "slug": "greenlight-beheer",
+        "title": "Website for Greenlight BV",
+        "description": "A forest, tree, and nature consultancy wanted expertise and services shown with clarity. greenlightbeheer.be positions 25 years of experience, certifications, and the Treepin ecosystem."
+      },
+      {
         "slug": "multiplugin",
-        "title": "Cabinet construction automation in SketchUp",
-        "description": "Furniture makers hand-designed technical specs. Multiplugin is a SketchUp Ruby plugin that auto-generates parametric cabinets, fronts, shelves, and production data. Platform backend via Next.js + Supabase."
+        "title": "Multiplugin platform",
+        "description": "One-click actions in SketchUp: from box to full corpus, from a flat face to a finished door. Plus an external platform for material lists, material management, and cost calculation."
       },
       {
         "slug": "iot-water-meters",
@@ -81,12 +116,26 @@
         "solution": "Next.js 16 webapp with React 19, TypeScript, Tailwind CSS. Capacitor 8 for Android tablet app (offline-capable, keep-awake). Supabase backend (PostgreSQL, Auth, RLS, Realtime). Mapbox GL + Leaflet for map visualization. Photo upload via Resend; optional Google Cloud Vision for analysis. Role management (technician/manager/client read-only), audit logs. Stack: Next.js 16 + React 19 + Capacitor 8 + Supabase + Mapbox GL.",
         "outcome": "Greenlightbeheer fully digitizes tree inspections. Inspectors enter data on-site; data syncs in real-time. Cost per inspection dropped from €50–150 to €10–30. Managers see live status and can optimize route planning. Clients (including city of Maldegem) now have an up-to-date, searchable inventory with risk prioritization and automatic follow-up scheduling. Complete audit trail for compliance."
       },
+      "studio-huis": {
+        "context": "Studio Huis guides homeowners in Flanders through smarter renovations: renovation advice, energy & EPC, interior and lighting advice, and digital home dossiers. The practice needed a website that turns expertise into a clear, approachable journey.",
+        "problem": "Without a sharp digital presence, the offer lived mostly in conversations and ad-hoc explanations. Visitors couldn’t quickly see how the approach works, which services exist, or how to take a first step — so leads and trust were left on the table.",
+        "approach": "We started from one clear promise — smart renovating starts here — and built a brand-first landing: hero, step-by-step approach, services with concrete deliverables, and a contact form with privacy consent. Focus First kept scope tight: persuade and convert, no unnecessary modules.",
+        "solution": "A marketing site on a modern Next.js stack with responsive layout, clear CTAs, service structure (renovation, energy/EPC, interior & light, digital home dossier), and an intake form. Content and UX tuned for homeowners who don’t know where to start.",
+        "outcome": "studiohuis.be is live as both a recognizable digital calling card and a lead channel. Visitors see in one viewport who Studio Huis is, how the journey works, and can share their situation immediately."
+      },
+      "greenlight-beheer": {
+        "context": "Greenlight BV is a certified study & consultancy practice in Meise for forest, park, nature, and tree management (including European Tree Technician & VETcert), with a 25-year path from tree care to broader green advice — including Treepin as a digital product.",
+        "problem": "Expertise and services (management advice, tree expertise, Natura 2000, timber sales, poplar cultivation, execution) were strong in the field, but not clearly bundled online. Public and private clients needed a professional, trust-building starting point.",
+        "approach": "We positioned Greenlight as a study & consultancy with natural imagery, certification badges, and a clear services grid. Treepin and partners got a place in navigation without crowding out the core — advice and guidance.",
+        "solution": "A corporate website with full-bleed hero, service cards, about section, client segments, and contact CTA. Responsive, SEO-friendly basics (title/description), and links into the wider ecosystem (including Treepin).",
+        "outcome": "greenlightbeheer.be makes 25 years of experience and the service portfolio visible to governments, forest groups, and private owners — with a professional first impression that matches the fieldwork and digital tools."
+      },
       "multiplugin": {
-        "context": "Furniture makers work in SketchUp: from mass box (client proposal) to detailed technical spec. Fronts, shelves, base, hole placement — everything must be parametric and export to production data.",
-        "problem": "Design was done manually: copy components, tweak per size, no template system. Errors crept in; no link between design and production list. Each variant required redesign from scratch. No standardized tag structure for manufacturing.",
-        "approach": "We built a SketchUp plugin that auto-generates parametric cabinet, fronts, shelves, and base from a mass box. Tags mark components; a web platform manages materials and settings. Plugin syncs via API with backend.",
-        "solution": "SketchUp Ruby plugin (v1.2.0) with cabinet construction automation logic. Wizard UI in HTML/CSS/Ruby for component selection. Supabase backend (PostgreSQL) for material library. Multiplugin Platform (Next.js 16, TypeScript, Tailwind, Supabase Auth, RLS) as web interface. Plugin syncs via REST API (JWT auth). Exports to snapshots and BOM. Stack: SketchUp Ruby + Next.js 16 + Supabase + PostgREST.",
-        "outcome": "Furniture makers drastically reduce design time per project. From mass box to complete technical spec now fully automated. Material library centrally managed; changes propagate to all projects. Production data (BOM, hole placement, dimensions) auto-generated without manual error-prone steps."
+        "context": "Furniture makers work in SketchUp from mass box (client proposal) to technical build-out. The core question: how do you reduce repeatable cabinet steps to a single click — without losing grip on materials and cost?",
+        "problem": "Going from box to corpus or from a flat face to a door meant hours of manual copying, measuring, and tagging. Material lists lived outside the model — error-prone for production and cost calculation.",
+        "approach": "Key idea: one-click actions. We built Multiplugin platform around actions that deliver in a single click — box → full corpus, flat face → finished door — tied to a tag system and an external platform for materials and cost.",
+        "solution": "SketchUp Ruby plugin with wizards like ‘Box to corpus’ (dimensions, materials, division, fronts) and Multitag filter (parts, quantities, m², lm). External web platform (Next.js + Supabase) for material management and cost calculation; API sync so the material list from the model matches the catalog.",
+        "outcome": "Makers turn a mass box into a full corpus — or a flat face into a finished door — in one click. Tags and quantities feed the material list on the external platform immediately — for management and costing, without double entry."
       },
       "iot-water-meters": {
         "context": "Construction sites install temporary water meters for billing and usage tracking. Projects run for months, and water consumption fluctuates by phase — so accurate readings are essential for correct billing and budget control.",
@@ -161,7 +210,7 @@
   "about": {
     "eyebrow": "About",
     "bio": "Focus First is a digital lab where we digitalize processes and turn ideas into working solutions. We connect all digital tools into one unified system that brings your idea to life — databases, payment processors, data platforms, whatever your project needs. With a hands-on approach: start small, get something working fast, refine from there. We understand how tools work together and build projects that grow as your needs do.",
-    "email": "jonathan@focusfirst.studio",
+    "email": "info@focusfirst.be",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
     "contactCta": "Tell me about your project"
@@ -201,61 +250,76 @@
       "formMessagePlaceholder": "What are you running into, and what would you like to test?",
       "formSubmitLabel": "Send via email",
       "formNote": "Emails are sent securely via Resend.",
-      "formSubject": "New project inquiry via focusfirst.studio",
+      "formSubject": "New project inquiry via focusfirst.be",
       "consentLabel": "I agree to Focus First Digital Lab processing my contact information to answer my question. This is separate from cookie settings for website statistics. More info in the",
       "consentLabelLink1": "privacy policy",
+      "consentAnd": "and the",
       "consentLabelLink2": "cookie policy",
-      "consentRequired": "Accept the processing of your contact information to continue"
+      "consentRequired": "Accept the processing of your contact information to continue",
+      "sending": "Sending…",
+      "success": "Thanks! We've received your inquiry and will be in touch within 24 hours.",
+      "errorPrefix": "Error:",
+      "errorRetry": "Please try again.",
+      "fillAll": "Please fill in all fields"
     }
   },
   "footer": {
     "copyright": "Focus First Digital Lab.",
+    "blog": "Blog",
     "privacy": "Privacy",
     "terms": "Terms",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "cookieSettings": "Cookie settings"
   },
   "legal": {
+    "back": "Back",
+    "lastUpdatedLabel": "Last updated",
+    "contactPrompt": "Questions about this policy? Contact us at",
     "privacy": {
       "title": "Privacy Policy",
-      "lastUpdated": "July 31, 2026",
+      "lastUpdated": "August 2, 2026",
       "sections": [
         {
           "heading": "1. Introduction",
-          "content": "Focus First respects your privacy. This privacy policy describes how we collect, use, and protect personal data."
+          "content": "Focus First respects your privacy. This privacy policy describes how we collect, use, and protect personal data under the GDPR."
         },
         {
           "heading": "2. Data Controller",
-          "content": "Focus First Digital Lab is responsible for processing your personal data. Contact: jonathan@focusfirst.studio"
+          "content": "The data controller is Jonathan Barbé, trading as Focus First Digital Lab. Address: J.Hammeneckerstraat 40, 1880 Kapelle-op-den-Bos, Belgium. VAT: BE 0881.296.468. Contact: info@focusfirst.be. Website: www.focusfirst.be."
         },
         {
           "heading": "3. Data We Collect",
-          "content": "We collect data you voluntarily provide through contact forms. This includes: name, email address, organization type, project description."
+          "content": "We collect data you voluntarily provide through contact forms: name, email address, organization type, project description. With consent, we also collect aggregated usage statistics via Google Analytics."
         },
         {
           "heading": "4. How We Use Your Data",
-          "content": "Your data is used to: contact you about your project, send quotes, and execute projects. We do not share your data with third parties without consent."
+          "content": "Your data is used to contact you about your project, send quotes, and deliver projects. Legal bases: consent (form) and/or legitimate interest for responding to your inquiry."
         },
         {
-          "heading": "5. Cookies and Tracking",
-          "content": "We use cookies for Google Analytics (aggregated data, with your consent) and session data. You can refuse cookies in your browser settings."
+          "heading": "5. Processors and transfers",
+          "content": "We use Resend for email delivery and, only with your consent, Google Analytics (Google Ireland / Google LLC). Analytics may process data outside the EU under appropriate safeguards (including Standard Contractual Clauses). We do not share contact data for marketing."
         },
         {
-          "heading": "6. Your Rights (GDPR)",
-          "content": "You have the right to view, correct, or delete your data. Contact us at jonathan@focusfirst.studio."
+          "heading": "6. Cookies and Tracking",
+          "content": "Non-essential analytics cookies are only set after consent via the cookie banner. Details are in the cookie policy. You can change your choice later via Cookie settings in the footer."
         },
         {
-          "heading": "7. Retention Period",
-          "content": "We retain contact information as long as needed for the project and up to 1 year afterward, unless you request deletion."
+          "heading": "7. Your Rights (GDPR)",
+          "content": "You have the right to access, rectify, erase, restrict, object, and data portability. Contact info@focusfirst.be. You may also lodge a complaint with the Belgian Data Protection Authority (GBA)."
+        },
+        {
+          "heading": "8. Retention Period",
+          "content": "We retain contact information as long as needed for the project and up to 1 year afterward, unless you request deletion. Analytics data follows Google Analytics retention (default up to 14 months)."
         }
       ]
     },
     "terms": {
       "title": "Terms of Service",
-      "lastUpdated": "July 31, 2026",
+      "lastUpdated": "August 2, 2026",
       "sections": [
         {
           "heading": "1. Applicability",
-          "content": "These terms apply to all services from Focus First Digital Lab."
+          "content": "These terms apply to all services of Jonathan Barbé, trading as Focus First Digital Lab (VAT BE 0881.296.468), J.Hammeneckerstraat 40, 1880 Kapelle-op-den-Bos, Belgium."
         },
         {
           "heading": "2. Quotes and Contracts",
@@ -285,27 +349,27 @@
     },
     "cookies": {
       "title": "Cookie Policy",
-      "lastUpdated": "July 31, 2026",
+      "lastUpdated": "August 2, 2026",
       "sections": [
         {
           "heading": "1. What Are Cookies?",
-          "content": "Cookies are small text files stored on your device to track your browsing behavior and improve your experience."
+          "content": "Cookies are small text files stored on your device. We also use similar technologies such as localStorage for your cookie preference."
         },
         {
           "heading": "2. Types of Cookies We Use",
-          "content": "Essential: for site functionality (session). Analytics (with consent): Google Analytics for anonymous usage statistics. Marketing: no marketing cookies."
+          "content": "Essential: cookie consent storage (localStorage key cookie-consent, until cleared). Analytics (consent only): Google Analytics (_ga, _ga_*, typically up to 2 years, provider: Google). Marketing: none."
         },
         {
           "heading": "3. Google Analytics",
-          "content": "We use Google Analytics (GA4) to collect aggregated site usage data. This helps us improve the site. IP addresses are anonymized."
+          "content": "With consent we use GA4 for aggregated statistics (page views, traffic). Consent Mode defaults to denied; analytics cookies activate only after you accept. We do not set advertising/remarketing cookies."
         },
         {
           "heading": "4. Your Choice",
-          "content": "You can accept or reject cookies via the cookie banner on first visit. You can change this preference later in browser settings."
+          "content": "On first visit you choose via the banner. Rejecting is as easy as accepting. You can change your choice later via Cookie settings in the footer."
         },
         {
-          "heading": "5. Optimization",
-          "content": "Accept cookies for a better experience. This is always optional."
+          "heading": "5. Recommendation",
+          "content": "Analytics helps us improve the site, but is always optional. Essential functionality works without analytics cookies."
         }
       ]
     }

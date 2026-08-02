@@ -1,7 +1,18 @@
 {
   "metadata": {
-    "title": "Focus First — Digital Lab",
-    "description": "Van eerste gesprek tot werkend prototype, in 6 tot 8 weken."
+    "siteName": "Focus First",
+    "title": "Focus First — AI-versneld digitaal lab",
+    "description": "Van idee naar werkend proof of concept in 6–8 weken. Analyse, bouw, test en go-live met AI als accelerator — zonder concessies op kwaliteit.",
+    "contactTitle": "Contact",
+    "contactDescription": "Vertel over je project en krijg een eerste inschatting. Focus First Digital Lab — snelle route van concept naar prototype.",
+    "privacyDescription": "Hoe Focus First Digital Lab persoonsgegevens verzamelt, gebruikt en beschermt.",
+    "cookiesDescription": "Welke cookies we gebruiken, waarom, en hoe je toestemming beheert.",
+    "termsDescription": "Algemene voorwaarden voor diensten van Focus First Digital Lab.",
+    "blogTitle": "Blog",
+    "blogDescription": "Inzichten over sneller conceptualiseren, focus behouden en de waarde van een digitale proof of concept."
+  },
+  "a11y": {
+    "skipToContent": "Ga naar inhoud"
   },
   "nav": {
     "process": "Aanpak",
@@ -9,7 +20,21 @@
     "audiences": "Voor wie",
     "pricing": "Prijzen",
     "about": "Over ons",
-    "contact": "Neem contact op"
+    "blog": "Blog",
+    "contact": "Neem contact op",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten"
+  },
+  "blog": {
+    "eyebrow": "Inzichten",
+    "title": "Blog",
+    "subtitle": "Korte stukken over focus, sneller conceptualiseren en waarom een proof of concept loont — herbruikbaar als post of newsletter.",
+    "readLabel": "Lees artikel",
+    "backLabel": "Terug naar blog",
+    "otherLabel": "Meer artikels",
+    "ctaHeading": "Wil je je idee scherp houden?",
+    "ctaBody": "Vertel kort waar je mee zit — we helpen je focussen en sneller tot iets werkends komen.",
+    "ctaLabel": "Neem contact op"
   },
   "hero": {
     "eyebrow": "Digital Lab",
@@ -51,9 +76,19 @@
         "description": "Inspecteurs werkten met papier en gps. Treepin is een tablet-app (Next.js + Capacitor) met offline sync, Mapbox-kaart en Supabase auth. Inspecties van €50–150 naar €10–30, klanten zien live inzage."
       },
       {
+        "slug": "studio-huis",
+        "title": "Website voor Studio Huis",
+        "description": "Renovatieadvies had een heldere digitale aanwezigheid nodig. We bouwden studiohuis.be: merksignaal eerst, duidelijke diensten, en een laagdrempelig contacttraject voor particuliere eigenaars."
+      },
+      {
+        "slug": "greenlight-beheer",
+        "title": "Website voor Greenlight BV",
+        "description": "Een studie- & adviesbureau voor bos-, boom- en natuurbeheer wilde expertise en diensten scherp tonen. greenlightbeheer.be positioneert 25 jaar ervaring, certificeringen en het Treepin-ecosysteem."
+      },
+      {
         "slug": "multiplugin",
-        "title": "Kastenbouw-automatisering in SketchUp",
-        "description": "Meubelmakers tekenden plannen handmatig uit. Multiplugin is een SketchUp Ruby-plugin die van massabox naar parametrisch corpus, fronten en productiedata gaat. Platform backend via Next.js + Supabase."
+        "title": "Multiplugin platform",
+        "description": "One-click actions in SketchUp: van box naar volledige corpus, van vlak naar uitgewerkte deur. Plus een extern platform voor materiaallijsten, materiaalbeheer en kostprijsberekening."
       },
       {
         "slug": "iot-water-meters",
@@ -81,12 +116,26 @@
         "solution": "Next.js 16 webapp met React 19, TypeScript, Tailwind CSS. Capacitor 8 voor Android tablet-app (offline-capable, keep-awake). Supabase backend (PostgreSQL, Auth, RLS, Realtime). Mapbox GL + Leaflet voor kaartvisualisatie. Foto-upload via Resend; optioneel Google Cloud Vision voor analyse. Rolenbeheer (technicus/beheerder/klant read-only), audit logs. Stack: Next.js 16 + React 19 + Capacitor 8 + Supabase + Mapbox GL.",
         "outcome": "Greenlightbeheer digitaliseert boominspecties volledig. Inspecteurs voeren ter plaatse in; data synchroniseert real-time. Kosten per inspectie daalden van €50–150 naar €10–30. Beheerders zien live status en kunnen routespanning optimaliseren. Klanten (waaronder gemeente Maldegem) hebben een actueel, doorzoekbaar overzicht met risicoprioritisatie en vervolgacties automatisch ingepland. Volledige audit trail voor compliance."
       },
+      "studio-huis": {
+        "context": "Studio Huis begeleidt particuliere eigenaars in Vlaanderen bij slim renoveren: renovatieadvies, energie & EPC, interieur- en lichtadvies, en digitale woningdossiers. De praktijk had een website nodig die expertise vertaalt naar een helder, laagdrempelig traject.",
+        "problem": "Zonder scherpe digitale aanwezigheid bleef het aanbod verspreid over gesprekken en losse uitleg. Bezoekers zagen niet snel hoe de aanpak werkt, welke diensten er zijn, of hoe ze een eerste stap zetten — waardoor leads en vertrouwen bleven liggen.",
+        "approach": "We vertrokken van één duidelijke belofte — slim renoveren begint hier — en bouwden een merksignaal-eerst landing: hero, aanpak in stappen, diensten met concrete deliverables, en een contactformulier met privacytoestemming. Focus First hield scope strak: overtuigen en converteren, geen overbodige modules.",
+        "solution": "Marketingwebsite op moderne Next.js-stack met responsive layout, duidelijke CTA’s, dienstenstructuur (renovatie, energie/EPC, interieur & licht, digitaal woningdossier) en een intake-formulier. Content en UX afgestemd op particuliere eigenaars die niet weten waar te beginnen.",
+        "outcome": "studiohuis.be staat live als herkenbaar digitaal visitekaartje én leadkanaal. Bezoekers zien in één viewport wie Studio Huis is, hoe het traject werkt, en kunnen meteen hun situatie doorgeven."
+      },
+      "greenlight-beheer": {
+        "context": "Greenlight BV is een gecertificeerd studie- & adviesbureau in Meise voor bos-, park-, natuur- en boombeheer (o.a. European Tree Technician & VETcert), met 25 jaar traject van boomverzorging naar breder groenadvies — inclusief Treepin als digitaal product.",
+        "problem": "Expertise en diensten (beheeradvies, boomexpertise, Natura 2000, houtverkoop, populierenteelt, uitvoering) waren sterk in de praktijk, maar digitaal onvoldoende gebundeld. Overheden en private opdrachtgevers hadden een professioneel, vertrouwenwekkend startpunt nodig.",
+        "approach": "We positioneerden Greenlight als studie- & adviesbureau met natuurlijke beeldtaal, certificeringsbadges en een helder dienstenraster. Treepin en partners kregen een plek in de navigatie zonder de kern — advies & begeleiding — te verdringen.",
+        "solution": "Corporate website met full-bleed hero, dienstenkaarten, over Greenlight, klantsegmenten en contact-CTA. Responsive, SEO-vriendelijke basis (title/description) en koppeling naar het bredere ecosysteem (o.a. Treepin).",
+        "outcome": "greenlightbeheer.be maakt 25 jaar ervaring en het dienstenportfolio zichtbaar voor overheden, bosgroepen en private eigenaars — met een professionele eerste indruk die aansluit bij het veldwerk en de digitale tools."
+      },
       "multiplugin": {
-        "context": "Meubelmakers werken in SketchUp: van massabox (klantvoorstel) naar gedetailleerde technische uitwerking. Fronten, leggers, sokkel, boringen — alles moet parametrisch zijn en exporteren naar productiedata.",
-        "problem": "Uitwerking gebeurde handmatig: kopieën van componenten, aanpassen per maat, geen template-systeem. Fouten slopen snel in; geen koppeling tussen ontwerp en productielijst. Elke variant moest opnieuw ontworpen worden. Geen gestandaardiseerde tagstructuur voor productie.",
-        "approach": "We bouwden een SketchUp-plugin die van massabox automatisch parametrisch corpus, fronten, leggers en sokkel genereert. Tags markeren componenten; een webplatform beheert materialen en instellingen. Plugin synchroniseert via API met backend.",
-        "solution": "SketchUp Ruby-plugin (v1.2.0) met automatisering van kastenbouw-logica. Wizard-interface in HTML/CSS/Ruby voor componentkeuze. Supabase backend (PostgreSQL) voor materiaalbibliotheek. Multiplugin Platform (Next.js 16, TypeScript, Tailwind, Supabase Auth, RLS) als webinterface. Plugin sync via REST API (JWT auth). Exports naar snapshots en BOM. Stack: SketchUp Ruby + Next.js 16 + Supabase + PostgREST.",
-        "outcome": "Meubelmakers reduceren ontwerptime per project drastisch. Van massabox naar complete technische uitwerking nu volledig geautomatiseerd. Materiaalbibliotheek centraal beheerd; wijzigingen propageren naar alle projecten. Productiedata (BOM, boringen, afmetingen) automatisch gegenereerd zonder handmatige foutgevoelige stappen."
+        "context": "Meubelmakers werken in SketchUp van massabox (klantvoorstel) naar technische uitwerking. De kernvraag: hoe reduceer je herhaalbare kastenbouwstappen tot één klik — zonder grip te verliezen op materialen en kostprijs?",
+        "problem": "Van box naar corpus of van vlak naar deur betekende uren handmatig kopiëren, opmeten en tags zetten. Materiaallijsten leefden los van het model — foutgevoelig voor productie én kostprijsberekening.",
+        "approach": "Key idea: one-click actions. We bouwden Multiplugin platform rond acties die in één klik resultaat leveren — box → volledige corpus, vlak → uitgewerkte deur — gekoppeld aan een tag-systeem en een extern platform voor materialen en kosten.",
+        "solution": "SketchUp Ruby-plugin met wizards zoals ‘Box naar corpus’ (afmetingen, materialen, opdeling, fronten) en Multitag-filter (onderdelen, stuks, m², lm). Extern webplatform (Next.js + Supabase) voor materiaalbeheer en kostprijsberekening; sync via API zodat de materiaallijst uit het model klopt met de catalogus.",
+        "outcome": "Meubelmakers zetten in één click een massabox om in een volledig corpus, of een vlak in een uitgewerkte deur. Tags en hoeveelheden voeden meteen de materiaallijst op het externe platform — voor beheer én kostprijs, zonder dubbel werk."
       },
       "iot-water-meters": {
         "context": "Op bouwplaatsen worden tijdelijke watermeters geplaatst voor facturatie en verbruiksopvolging. Projecten draaien maanden, en waterverbruik fluctueert sterk per fase — dus nauwkeurige metingen zijn essentieel voor correcte facturatie en budgetbewaking.",
@@ -161,7 +210,7 @@
   "about": {
     "eyebrow": "Over ons",
     "bio": "Focus First is een digital lab waar we processen digitaliseren en ideeën omzetten in werkende oplossingen. We verbinden alle digitale tools tot een eenheid die je idee tot een werkende realiteit brengt — databases, payment processors, data platforms, alles waar je project behoefte aan heeft. Met een hands-on aanpak: klein beginnen, snel iets werkends neerzetten, en van daaruit verfijnen. We begrijpen hoe tools samenwerken en bouwen projecten die groeien naarmate jouw vraag groeit.",
-    "email": "jonathan@focusfirst.studio",
+    "email": "info@focusfirst.be",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
     "contactCta": "Vertel me over je project"
@@ -201,61 +250,76 @@
       "formMessagePlaceholder": "Waar loop je tegenaan, en wat zou je willen testen?",
       "formSubmitLabel": "Verstuur via e-mail",
       "formNote": "Emails worden veilig verstuurd via Resend.",
-      "formSubject": "Nieuwe projectaanvraag via focusfirst.studio",
+      "formSubject": "Nieuwe projectaanvraag via focusfirst.be",
       "consentLabel": "Ik ga akkoord met de verwerking van mijn contactgegevens door Focus First Digital Lab om mijn vraag te beantwoorden. Dit is los van cookie-instellingen voor website-statistieken. Meer info in het",
       "consentLabelLink1": "privacybeleid",
+      "consentAnd": "en het",
       "consentLabelLink2": "cookiebeleid",
-      "consentRequired": "Accepteer de verwerking van je contactgegevens om door te gaan"
+      "consentRequired": "Accepteer de verwerking van je contactgegevens om door te gaan",
+      "sending": "Verzenden…",
+      "success": "Bedankt! We hebben je aanvraag ontvangen en nemen binnen 24 uur contact op.",
+      "errorPrefix": "Fout:",
+      "errorRetry": "Probeer opnieuw.",
+      "fillAll": "Vul alle velden in"
     }
   },
   "footer": {
     "copyright": "Focus First Digital Lab.",
+    "blog": "Blog",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "cookieSettings": "Cookie-instellingen"
   },
   "legal": {
+    "back": "Terug",
+    "lastUpdatedLabel": "Laatst bijgewerkt",
+    "contactPrompt": "Vragen over dit beleid? Mail ons op",
     "privacy": {
       "title": "Privacybeleid",
-      "lastUpdated": "31 juli 2026",
+      "lastUpdated": "2 augustus 2026",
       "sections": [
         {
           "heading": "1. Inleiding",
-          "content": "Focus First respecteert uw privacy. Dit privacybeleid beschrijft hoe we persoonlijke gegevens verzamelen, gebruiken en beschermen."
+          "content": "Focus First respecteert uw privacy. Dit privacybeleid beschrijft hoe we persoonlijke gegevens verzamelen, gebruiken en beschermen volgens de AVG (GDPR)."
         },
         {
           "heading": "2. Verantwoordelijke",
-          "content": "Focus First Digital Lab is verantwoordelijk voor de verwerking van uw persoonlijke gegevens. Contact: jonathan@focusfirst.studio"
+          "content": "Verwerkingsverantwoordelijke is Jonathan Barbé, handelend onder Focus First Digital Lab. Adres: J.Hammeneckerstraat 40, 1880 Kapelle-op-den-Bos, België. BTW: BE 0881.296.468. Contact: info@focusfirst.be. Website: www.focusfirst.be."
         },
         {
           "heading": "3. Gegevens die we verzamelen",
-          "content": "We verzamelen gegevens die u vrijwillig verstrekt via contactformulieren. Dit omvat: naam, e-mailadres, organisatietype, projectbeschrijving."
+          "content": "We verzamelen gegevens die u vrijwillig verstrekt via contactformulieren: naam, e-mailadres, organisatietype, projectbeschrijving. Met toestemming verzamelen we ook geaggregeerde gebruiksstatistieken via Google Analytics."
         },
         {
           "heading": "4. Hoe we uw gegevens gebruiken",
-          "content": "Uw gegevens worden gebruikt om: contact met u op te nemen over uw project, een offerte te versturen, en projecten uit te voeren. We delen uw gegevens niet met derden zonder toestemming."
+          "content": "Uw gegevens worden gebruikt om contact op te nemen over uw project, offertes te versturen en projecten uit te voeren. Rechtsgrond: toestemming (formulier) en/of gerechtvaardigd belang voor communicatie over uw aanvraag."
         },
         {
-          "heading": "5. Cookies en tracking",
-          "content": "We gebruiken cookies voor Google Analytics (geaggregeerde data, met uw toestemming) en sessiegegevens. U kunt cookies weigeren via uw browserinstellingen."
+          "heading": "5. Verwerkers en doorgifte",
+          "content": "We gebruiken Resend voor e-mailbezorging en, alleen met uw toestemming, Google Analytics (Google Ireland / Google LLC). Analytics kan gegevens verwerken buiten de EU onder passende waarborgen (o.a. standaardcontractbepalingen). We delen contactgegevens niet voor marketingdoeleinden."
         },
         {
-          "heading": "6. Uw rechten (GDPR)",
-          "content": "U heeft het recht om uw gegevens in te zien, te corrigeren of te verwijderen. Contacteer ons op jonathan@focusfirst.studio."
+          "heading": "6. Cookies en tracking",
+          "content": "Niet-essentiële analytics-cookies worden enkel geplaatst na toestemming via de cookiebanner. Details staan in het cookiebeleid. U kunt uw keuze later wijzigen via Cookie-instellingen in de footer."
         },
         {
-          "heading": "7. Bewaarduur",
-          "content": "We bewaren contactgegevens zolang nodig voor het project en tot 1 jaar daarna, tenzij u om verwijdering verzoekt."
+          "heading": "7. Uw rechten (AVG)",
+          "content": "U heeft het recht op inzage, correctie, wissen, beperking, bezwaar en dataportabiliteit. Contacteer info@focusfirst.be. U kunt ook een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA)."
+        },
+        {
+          "heading": "8. Bewaarduur",
+          "content": "We bewaren contactgegevens zolang nodig voor het project en tot 1 jaar daarna, tenzij u om verwijdering verzoekt. Analytics-gegevens volgen het bewaarbeleid van Google Analytics (standaard maximaal 14 maanden)."
         }
       ]
     },
     "terms": {
       "title": "Algemene Voorwaarden",
-      "lastUpdated": "31 juli 2026",
+      "lastUpdated": "2 augustus 2026",
       "sections": [
         {
           "heading": "1. Geldigheid",
-          "content": "Deze voorwaarden gelden voor alle diensten van Focus First Digital Lab."
+          "content": "Deze voorwaarden gelden voor alle diensten van Jonathan Barbé, handelend onder Focus First Digital Lab (BTW BE 0881.296.468), J.Hammeneckerstraat 40, 1880 Kapelle-op-den-Bos."
         },
         {
           "heading": "2. Offertes en contracten",
@@ -285,27 +349,27 @@
     },
     "cookies": {
       "title": "Cookiebeleid",
-      "lastUpdated": "31 juli 2026",
+      "lastUpdated": "2 augustus 2026",
       "sections": [
         {
           "heading": "1. Wat zijn cookies?",
-          "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen om uw browsergedrag bij te houden en uw ervaring te verbeteren."
+          "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen. We gebruiken ook vergelijkbare technologieën zoals localStorage voor uw cookievoorkeur."
         },
         {
           "heading": "2. Soorten cookies die we gebruiken",
-          "content": "Essentieel: voor sitewerking (sessie). Analytics (met toestemming): Google Analytics voor anonieme gebruikersstatistieken. Marketing: geen marketing cookies."
+          "content": "Essentieel: opslag van cookietoestemming (localStorage-sleutel cookie-consent, duur: tot u wist). Analytics (enkel met toestemming): Google Analytics (_ga, _ga_*, duur typisch tot 2 jaar, provider: Google). Marketing: geen."
         },
         {
           "heading": "3. Google Analytics",
-          "content": "We gebruiken Google Analytics (GA4) om geaggregeerde sitegebruiksdata te verzamelen. Dit helpt ons de site te verbeteren. IP-adressen worden geanonimiseerd."
+          "content": "Met toestemming gebruiken we GA4 voor geaggregeerde statistieken (paginaweergaven, verkeer). Consent Mode staat standaard op geweigerd; pas na akkoord worden analytics-cookies geactiveerd. We zetten geen advertentie-/remarketingcookies."
         },
         {
           "heading": "4. Uw keuze",
-          "content": "U kunt cookies accepteren of weigeren via het cookiebannerje bij eerste bezoek. U kunt deze voorkeur later wijzigen in browserinstellingen."
+          "content": "Bij het eerste bezoek kiest u via de banner. Weigeren is even eenvoudig als accepteren. U kunt later opnieuw kiezen via Cookie-instellingen in de footer."
         },
         {
-          "heading": "5. Optimalanally",
-          "content": "Accepteer cookies voor een betere ervaring. Dit is altijd optioneel."
+          "heading": "5. Aanbeveling",
+          "content": "Analytics helpt ons de site te verbeteren, maar is altijd optioneel. Essentiële functionaliteit werkt zonder analytics-cookies."
         }
       ]
     }

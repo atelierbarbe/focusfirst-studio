@@ -31,11 +31,13 @@ export default async function Home({
   const tPricing = await getTranslations({ locale, namespace: "pricing" });
   const tAbout = await getTranslations({ locale, namespace: "about" });
 
-  const process = tProcess.raw("steps") as ProcessStep[];
+  const processSteps = tProcess.raw("steps") as ProcessStep[];
   const caseStudies = tCases.raw("items") as CaseStudy[];
   const audiences = tAudiences.raw("items") as Audience[];
   const audienceExamples = tAudiences.raw("examples") as string[];
   const pricing = tPricing.raw("tiers") as PricingTier[];
+  const linkedInUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
+  const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL;
 
   return (
     <>
@@ -76,7 +78,7 @@ export default async function Home({
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <Eyebrow>{tProcess("eyebrow")}</Eyebrow>
           <div className="mt-10 divide-y divide-light-gray border-t border-light-gray">
-            {process.map((item) => (
+            {processSteps.map((item) => (
               <div
                 key={item.step}
                 className="relative grid gap-2 overflow-hidden py-8 md:grid-cols-[auto_1fr_2fr] md:items-baseline md:gap-8"
@@ -259,12 +261,26 @@ export default async function Home({
               >
                 {tAbout("email")}
               </a>
-              <a href="#" className="text-dark-gray hover:text-near-black">
-                {tAbout("linkedinLabel")}
-              </a>
-              <a href="#" className="text-dark-gray hover:text-near-black">
-                {tAbout("githubLabel")}
-              </a>
+              {linkedInUrl && (
+                <a
+                  href={linkedInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark-gray hover:text-near-black"
+                >
+                  {tAbout("linkedinLabel")}
+                </a>
+              )}
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark-gray hover:text-near-black"
+                >
+                  {tAbout("githubLabel")}
+                </a>
+              )}
             </div>
           </div>
         </div>

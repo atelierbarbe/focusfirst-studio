@@ -81,7 +81,7 @@ export default function IntakeForm() {
     e.preventDefault();
 
     if (!org || !scope || !timeline || !name || !email || !message) {
-      setSubmitError("Please fill in all fields");
+      setSubmitError(t("fillAll"));
       return;
     }
 
@@ -114,11 +114,15 @@ export default function IntakeForm() {
           timelineLabel,
           tierName: matchedTier?.name,
           tierPrice: matchedTier?.price,
+          consent,
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send inquiry");
+        const payload = (await response.json().catch(() => null)) as {
+          error?: string;
+        } | null;
+        throw new Error(payload?.error || t("errorRetry"));
       }
 
       setSubmitStatus("success");
@@ -236,16 +240,16 @@ export default function IntakeForm() {
         <span className="text-sm text-dark-gray leading-relaxed">
           {t("consentLabel")}{" "}
           <a
-            href={`/${locale}/privacy`}
+            href={locale === "nl" ? "/privacy" : `/${locale}/privacy`}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-near-black hover:underline"
           >
             {t("consentLabelLink1")}
-          </a>
-          {" en "}{" "}
+          </a>{" "}
+          {t("consentAnd")}{" "}
           <a
-            href={`/${locale}/cookies`}
+            href={locale === "nl" ? "/cookies" : `/${locale}/cookies`}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-near-black hover:underline"
@@ -262,21 +266,19 @@ export default function IntakeForm() {
           disabled={submitStatus === "loading"}
           className="inline-flex items-center rounded bg-near-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark-gray disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {submitStatus === "loading" ? "Sending..." : t("formSubmitLabel")}
+          {submitStatus === "loading" ? t("sending") : t("formSubmitLabel")}
         </button>
 
         {submitStatus === "success" && (
           <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-4">
-            <p className="text-sm text-green-800">
-              ✓ Thanks! We've received your inquiry and will be in touch within 24 hours.
-            </p>
+            <p className="text-sm text-green-800">{t("success")}</p>
           </div>
         )}
 
         {submitStatus === "error" && (
           <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
             <p className="text-sm text-red-800">
-              ✗ Error: {submitError}. Please try again.
+              {t("errorPrefix")} {submitError}. {t("errorRetry")}
             </p>
           </div>
         )}

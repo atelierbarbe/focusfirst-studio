@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Eyebrow from "@/components/Eyebrow";
 import IntakeForm from "@/components/IntakeForm";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return buildMetadata({
+    locale,
+    path: "/contact",
+    title: t("contactTitle"),
+    description: t("contactDescription"),
+  });
+}
 
 export default async function ContactPage({
   params,

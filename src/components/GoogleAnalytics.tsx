@@ -3,7 +3,7 @@ import Script from "next/script";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function GoogleAnalytics() {
-  if (!GA_ID) {
+  if (!GA_ID || !GA_ID.startsWith("G-")) {
     return null;
   }
 
@@ -22,18 +22,18 @@ export default function GoogleAnalytics() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            // Default to denied, user choice via cookie-consent component
             gtag('consent', 'default', {
-              'analytics_storage': 'denied'
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
             });
 
             gtag('config', '${GA_ID}', {
-              page_path: window.location.pathname,
               send_page_view: false,
+              anonymize_ip: true
             });
-
-            // Send page view after tracking ID is set
-            gtag('event', 'page_view');
           `,
         }}
       />
