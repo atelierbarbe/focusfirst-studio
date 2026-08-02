@@ -69,6 +69,9 @@
   "caseStudies": {
     "eyebrow": "What we've built before",
     "viewLabel": "View case study",
+    "prevLabel": "Previous cases",
+    "nextLabel": "Next cases",
+    "goToLabel": "Go to case",
     "items": [
       {
         "slug": "treepin",

@@ -2,6 +2,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Focus, Users, Zap } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
+import CaseStudiesCarousel from "@/components/CaseStudiesCarousel";
+import { caseMedia } from "@/content/case-media";
 
 const PRINCIPLE_ICONS = [Focus, Users, Zap] as const;
 
@@ -111,27 +113,25 @@ export default async function Home({
       {/* Case Studies */}
       <section id="work" className="border-t border-light-gray bg-light-gray/40">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <Eyebrow>{tCases("eyebrow")}</Eyebrow>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {caseStudies.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/cases/${item.slug}`}
-                className="group rounded-lg border border-light-gray bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-md"
-              >
-                <h3 className="text-lg font-semibold text-near-black">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-dark-gray">{item.description}</p>
-                <span className="mt-4 inline-flex items-center text-sm font-medium text-accent">
-                  {tCases("viewLabel")}
-                  <span className="ml-1 transition-transform group-hover:translate-x-1">
-                    →
-                  </span>
-                </span>
-              </Link>
-            ))}
-          </div>
+          <CaseStudiesCarousel
+            header={<Eyebrow>{tCases("eyebrow")}</Eyebrow>}
+            items={caseStudies.map((item) => {
+              const shot = caseMedia[item.slug]?.screenshots[0];
+              return {
+                ...item,
+                image: shot
+                  ? {
+                      src: shot.src,
+                      alt: shot.alt[locale === "en" ? "en" : "nl"],
+                    }
+                  : undefined,
+              };
+            })}
+            viewLabel={tCases("viewLabel")}
+            prevLabel={tCases("prevLabel")}
+            nextLabel={tCases("nextLabel")}
+            goToLabel={tCases("goToLabel")}
+          />
         </div>
       </section>
 
