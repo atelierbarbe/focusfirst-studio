@@ -23,7 +23,7 @@ export default function CookieConsent() {
     const stored = localStorage.getItem(CONSENT_KEY);
     if (stored === "accepted" || stored === "rejected") {
       setConsent(stored);
-      updateConsent(stored === "accepted");
+      void updateConsent(stored === "accepted");
     }
 
     const openSettings = () => setConsent("pending");
@@ -74,14 +74,15 @@ export default function CookieConsent() {
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
     setConsent("accepted");
-    updateConsent(true);
-    trackPageView(window.location.pathname + window.location.search);
+    void updateConsent(true).then(() => {
+      void trackPageView(window.location.pathname + window.location.search);
+    });
   };
 
   const handleReject = () => {
     localStorage.setItem(CONSENT_KEY, "rejected");
     setConsent("rejected");
-    updateConsent(false);
+    void updateConsent(false);
   };
 
   if (!blocking) {
@@ -90,47 +91,52 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed inset-0 z-[60]">
+      {/* Blocks interaction with the page until a choice is made */}
       <div
-        className="absolute inset-0 bg-near-black/55 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-near-black/40"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 flex items-end justify-center p-4 sm:items-center sm:p-6">
-        <div
-          ref={dialogRef}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby={titleId}
-          aria-describedby={descriptionId}
-          className="relative z-10 w-full max-w-lg rounded-lg border border-white/10 bg-near-black p-5 text-white shadow-xl sm:p-6"
-        >
-          <h3 id={titleId} className="font-semibold">
-            {t("title")}
-          </h3>
-          <p id={descriptionId} className="mt-2 text-sm text-gray-300">
-            {t("description")}
-          </p>
-          <Link
-            href="/cookies"
-            className="mt-3 inline-block text-sm text-gray-400 hover:text-white hover:underline"
-          >
-            {t("link")} →
-          </Link>
-          <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-            <button
-              type="button"
-              onClick={handleReject}
-              className="rounded border border-gray-600 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-gray-900"
-            >
-              {t("rejectAll")}
-            </button>
-            <button
-              type="button"
-              data-cookie-accept
-              onClick={handleAccept}
-              className="rounded bg-white px-4 py-2.5 text-sm font-medium text-near-black transition-colors hover:bg-gray-100"
-            >
-              {t("acceptAll")}
-            </button>
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={descriptionId}
+        className="absolute bottom-0 left-0 right-0 border-t border-gray-700 bg-near-black p-4 text-white sm:p-6"
+      >
+        <div className="mx-auto max-w-4xl">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex-1">
+              <h3 id={titleId} className="font-semibold">
+                {t("title")}
+              </h3>
+              <p id={descriptionId} className="mt-1 text-sm text-gray-300">
+                {t("description")}
+              </p>
+              <Link
+                href="/cookies"
+                className="mt-2 inline-block text-sm text-gray-400 hover:text-white hover:underline"
+              >
+                {t("link")} →
+              </Link>
+            </div>
+            <div className="flex gap-3 sm:flex-shrink-0">
+              <button
+                type="button"
+                onClick={handleReject}
+                className="rounded border border-gray-600 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-900"
+              >
+                {t("rejectAll")}
+              </button>
+              <button
+                type="button"
+                data-cookie-accept
+                onClick={handleAccept}
+                className="rounded bg-white px-4 py-2 text-sm font-medium text-near-black transition-colors hover:bg-gray-100"
+              >
+                {t("acceptAll")}
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ export type ResolvedPost = {
   title: string;
   description: string;
   socialSnippet: string;
+  coverImage?: string;
   sections: LocalizedPost["sections"];
 };
 
@@ -36,6 +37,7 @@ export function resolvePost(
     title: localized.title,
     description: localized.description,
     socialSnippet: localized.socialSnippet,
+    coverImage: post.coverImage,
     sections: localized.sections,
   };
 }

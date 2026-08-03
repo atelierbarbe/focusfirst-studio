@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
 import { buildMetadata } from "@/lib/metadata";
-import { localizedUrl } from "@/lib/site";
+import { SITE_URL, localizedUrl } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import {
   formatPostDate,
@@ -13,6 +14,19 @@ import {
   getPostBySlug,
   resolvePost,
 } from "@/content/blog";
+
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+}
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -34,6 +48,7 @@ export async function generateMetadata({
     path: `/blog/${slug}`,
     title: resolved.title,
     description: resolved.description,
+    image: resolved.coverImage,
   });
 }
 
@@ -72,6 +87,9 @@ export default async function BlogPostPage({
       url: localizedUrl("nl", ""),
     },
     mainEntityOfPage: pageUrl,
+    ...(resolved.coverImage
+      ? { image: [`${SITE_URL}${resolved.coverImage}`] }
+      : {}),
   };
 
   return (
@@ -104,6 +122,19 @@ export default async function BlogPostPage({
             <p className="mt-6 text-lg text-dark-gray">{resolved.description}</p>
           </div>
 
+          {resolved.coverImage && (
+            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-light-gray/40">
+              <Image
+                src={resolved.coverImage}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-cover"
+              />
+            </div>
+          )}
+
           <div className="mt-12 space-y-10">
             {resolved.sections.map((section, index) => (
               <section key={index}>
@@ -121,6 +152,18 @@ export default async function BlogPostPage({
                 </div>
               </section>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded border border-light-gray bg-white px-4 py-2.5 text-sm font-medium text-near-black transition-colors hover:border-near-black"
+            >
+              <LinkedInIcon className="size-4" />
+              {t("shareLinkedIn")}
+            </a>
           </div>
 
           <div className="mt-14 rounded-lg border border-light-gray bg-light-gray/40 p-6">

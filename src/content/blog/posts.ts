@@ -17,11 +17,109 @@ export type BlogPost = {
   slug: string;
   publishedAt: string;
   tags: string[];
+  /** Optional cover image under /public */
+  coverImage?: string;
   nl: LocalizedPost;
   en: LocalizedPost;
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "ai-helpt-je-sneller-groeien",
+    publishedAt: "2026-08-03",
+    tags: ["ai", "poc", "growth"],
+    coverImage: "/blog/ai-helpt-je-sneller-groeien.jpg",
+    nl: {
+      title: "AI helpt je sneller groeien — door ideeën vroeg te testen",
+      description:
+        "De meeste digitale projecten mislukken niet omdat het idee slecht was. Ze mislukken omdat er te veel gebouwd werd vóór iemand de echte vraag beantwoordde. AI verkort die weg.",
+      socialSnippet:
+        "Niet meer bouwen — eerder weten. AI verkleint de afstand tussen ‘we denken dat dit werkt’ en ‘laten we het uitzoeken’. Dat is het groeivoordeel.",
+      sections: [
+        {
+          paragraphs: [
+            "De meeste digitale projecten mislukken niet omdat het idee slecht was. Ze mislukken omdat er te veel gebouwd werd vóór iemand de échte vraag beantwoordde: werkt dit ook voor de mensen voor wie het bedoeld is? Op het moment dat je dat weet, heb je al maanden geïnvesteerd — en is het originele idee zo bedekt met features en compromissen dat je niet meer kunt zien wat er precies niet klopte.",
+            "AI helpt dat patroon doorbreken. Niet door na te denken in jouw plaats, maar door de afstand tussen ‘we denken dat dit werkt’ en ‘laten we het uitzoeken’ een stuk kleiner te maken.",
+          ],
+        },
+        {
+          heading: "Compact starten is een groeivoordeel",
+          paragraphs: [
+            "Een klein team zonder zware IT-structuur heeft één serieus voordeel: je kunt bijsturen zonder dat het een reorganisatie wordt. Kortere beslissingslijnen, minder sunk cost, sneller iets anders proberen. Dat voordeel verdwijnt zodra je te vroeg te veel bouwt — dan draag je mee aan hetzelfde gewicht als grotere spelers, maar zonder hun reserves.",
+            "Vroeg testen is een manier om dat voordeel te bewaren. Je kiest één aanname, maakt die zichtbaar voor echte gebruikers, en leert van wat je ziet — vóór je er een volledig platform omheen bouwt.",
+          ],
+        },
+        {
+          heading: "Wat vroeg testen oplevert — een voorbeeld",
+          paragraphs: [
+            "Een zorgorganisatie had een duidelijk plan: een digitaal intakeplatform bouwen waarmee cliënten zich konden aanmelden en een coördinator ze kon koppelen aan de juiste begeleider. Geschatte bouwtijd: vier maanden. Budget: aanzienlijk.",
+            "In plaats van meteen het volledige platform te bouwen, ontwikkelde Focus First een gerichte digitale POC — een professionele werkende omgeving met een intake-flow, een coördinatorpaneel en geautomatiseerde opvolging. Geen Excel, geen improvisatie. Echte formulieren, echte data, een echte gebruikerservaring — maar gefocust op één vraag: werkt de kern?",
+            "Wat de data toonde: families doorliepen de intake zonder problemen. Maar ze keerden terug — niet omdat er iets mis was, maar omdat ze niets hadden gehoord. De frustratie zat niet in de wachttijd, maar in de stilte erna. Dat inzicht stond nergens in de oorspronkelijke spec. Het zat in het gedrag dat de POC zichtbaar maakte.",
+            "Op basis van die data werd bijgestuurd nog vóór er een volwaardig platform stond. Het uiteindelijke systeem had minder matchinglogica dan gepland — maar stuurde families meteen een statusbevestiging. Dat ene element veranderde de ervaring volledig. De POC maakte het mogelijk om dat te weten vóór de grote investering, niet erna.",
+          ],
+        },
+        {
+          heading: "Betaalbaar testen, bewust opschalen",
+          paragraphs: [
+            "Een gerichte proof of concept kost een fractie van een volledige build. Maar het is geen besparing — het is een aankoop. Je koopt duidelijkheid: kloppen de aannames, begrijpen gebruikers wat je aanbiedt, is er iets wat je gemist hebt? Pas als je dat weet, is investeren in een bredere build een bewuste keuze in plaats van een gok.",
+            "Als blijkt dat de kern niet klopt, heb je dat ontdekt voor een prijs die je de ruimte geeft om bij te sturen — of zelfs te stoppen. Dat is geen mislukking. Het is precies waar het om gaat.",
+          ],
+        },
+        {
+          heading: "Focus houden terwijl je groeit",
+          paragraphs: [
+            "Sneller kunnen bouwen vergroot ook de verleiding om méér te bouwen. AI verlaagt de drempel — dat is fijn, maar het vergroot ook het risico dat de scope opzwelt voordat er bewijs is. Daarom bewaken wij de focus actief: één aanname per cyclus, één belofte per oplevering.",
+            "Bij Focus First gebruiken we AI als versneller binnen die discipline: klein starten, iets zichtbaars neerzetten, leren van wat je ziet, en dan groeien op wat overtuigt. Elk idee — en elke bedenker — krijgt zo een eerlijke kans om te bewijzen dat opschalen de moeite waard is.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "AI helps you grow faster — by testing ideas early",
+      description:
+        "Most digital projects don’t fail because the idea was bad. They fail because too much was built before anyone answered the real question. AI shortens that path.",
+      socialSnippet:
+        "Not more building — knowing sooner. AI shrinks the gap between ‘we think this works’ and ‘let’s find out’. That’s the growth advantage.",
+      sections: [
+        {
+          paragraphs: [
+            "Most digital projects don’t fail because the idea was bad. They fail because too much was built before anyone answered the real question: does this actually work for the people it’s meant for? By the time you find out, you’ve already spent months — and the original idea has been buried under so many features and compromises that it’s hard to see what actually went wrong.",
+            "AI helps break that pattern. Not by thinking for you, but by making the gap between ‘we think this works’ and ‘let’s find out’ a lot shorter.",
+          ],
+        },
+        {
+          heading: "Starting compact is a growth advantage",
+          paragraphs: [
+            "A small team without heavy IT infrastructure has one serious advantage: you can change course without it becoming a reorganization. Shorter decision lines, less sunk cost, faster iteration. That advantage disappears the moment you build too much too early — then you’re carrying the same weight as larger players, without their reserves.",
+            "Testing early is how you preserve that advantage. Pick one assumption, make it visible to real users, and learn from what you see — before you build a full platform around it.",
+          ],
+        },
+        {
+          heading: "What early testing actually delivers — a real example",
+          paragraphs: [
+            "A care organization had a clear plan: build a digital intake platform where clients could register and a coordinator could match them to the right caregiver. Estimated build time: four months. Budget: significant.",
+            "Instead of building the full platform straight away, Focus First developed a focused digital POC — a professional, fully working environment with an intake flow, a coordinator panel, and automated follow-up. No spreadsheets, no improvisation. Real forms, real data, a real user experience — scoped around one question: does the core work?",
+            "What the data showed: families completed the intake without friction. But they came back — not because something went wrong, but because they hadn't heard anything. The frustration wasn't the wait. It was the silence that followed. That insight wasn't in the original spec. It was in the behaviour the POC made visible.",
+            "Adjustments were made before a full platform was ever built. The final system had less matching logic than planned — but it sent families an immediate status confirmation. That single element changed the experience entirely. The POC made it possible to know that before the big investment, not after.",
+          ],
+        },
+        {
+          heading: "Affordable testing, deliberate scaling",
+          paragraphs: [
+            "A focused proof of concept costs a fraction of a full build. But it isn’t a saving — it’s a purchase. You’re buying clarity: do the assumptions hold, do users understand what you’re offering, is there something you missed? Only once you know that is investing in a broader build a deliberate decision rather than a gamble.",
+            "If the core turns out not to work, you’ve found that out at a cost that still leaves you room to adjust — or even stop. That isn’t failure. That’s the whole point.",
+          ],
+        },
+        {
+          heading: "Stay focused while you grow",
+          paragraphs: [
+            "Being able to build faster also increases the temptation to build more. AI lowers the barrier — which is useful, but it also raises the risk of scope expanding before there’s any evidence to support it. That’s why we actively protect focus: one assumption per cycle, one promise per delivery.",
+            "At Focus First we use AI as an accelerator inside that discipline: start small, ship something visible, learn from what you see, then grow on what actually convinces. Every idea — and every person behind one — gets a fair shot at proving that scaling is worth it.",
+          ],
+        },
+      ],
+    },
+  },
   {
     slug: "ideeen-sneller-conceptualiseren",
     publishedAt: "2026-08-02",

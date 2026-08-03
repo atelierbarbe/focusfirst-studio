@@ -6,6 +6,8 @@ type BuildMetadataOptions = {
   path?: string;
   title: string;
   description: string;
+  /** Absolute path under public, e.g. /blog/cover.jpg */
+  image?: string;
   /** When true, use title as absolute (no template suffix). */
   absoluteTitle?: boolean;
 };
@@ -15,10 +17,12 @@ export function buildMetadata({
   path = "",
   title,
   description,
+  image,
   absoluteTitle = false,
 }: BuildMetadataOptions): Metadata {
   const url = localizedUrl(locale, path);
   const ogLocale = locale === "nl" ? "nl_BE" : "en_US";
+  const images = image ? [{ url: image }] : undefined;
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -35,11 +39,13 @@ export function buildMetadata({
       siteName: SITE_NAME,
       title,
       description,
+      ...(images ? { images } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      ...(image ? { images: [image] } : {}),
     },
     robots: {
       index: true,

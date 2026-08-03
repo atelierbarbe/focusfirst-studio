@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Eyebrow from "@/components/Eyebrow";
@@ -44,26 +45,41 @@ export default async function BlogIndexPage({
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group block py-8 transition-colors hover:bg-light-gray/30"
+                className="group grid gap-6 py-8 transition-colors hover:bg-light-gray/30 md:grid-cols-[minmax(0,12rem)_1fr] md:items-start"
               >
-                <time
-                  dateTime={post.publishedAt}
-                  className="font-mono text-xs uppercase tracking-wider text-medium-gray"
-                >
-                  {formatPostDate(post.publishedAt, locale)}
-                </time>
-                <h2 className="mt-3 text-2xl font-semibold text-near-black group-hover:text-accent">
-                  {post.title}
-                </h2>
-                <p className="mt-2 max-w-2xl text-dark-gray">
-                  {post.description}
-                </p>
-                <span className="mt-4 inline-flex items-center text-sm font-medium text-accent">
-                  {t("readLabel")}
-                  <span className="ml-1 transition-transform group-hover:translate-x-1">
-                    →
+                {post.coverImage ? (
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-light-gray/40">
+                    <Image
+                      src={post.coverImage}
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 100vw, 192px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : (
+                  <div className="hidden md:block" aria-hidden="true" />
+                )}
+                <div>
+                  <time
+                    dateTime={post.publishedAt}
+                    className="font-mono text-xs uppercase tracking-wider text-medium-gray"
+                  >
+                    {formatPostDate(post.publishedAt, locale)}
+                  </time>
+                  <h2 className="mt-3 text-2xl font-semibold text-near-black group-hover:text-accent">
+                    {post.title}
+                  </h2>
+                  <p className="mt-2 max-w-2xl text-dark-gray">
+                    {post.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center text-sm font-medium text-accent">
+                    {t("readLabel")}
+                    <span className="ml-1 transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
                   </span>
-                </span>
+                </div>
               </Link>
             </li>
           ))}
