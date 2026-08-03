@@ -52,10 +52,12 @@ export const blogPosts: BlogPost[] = [
         {
           heading: "Wat vroeg testen oplevert — een voorbeeld",
           paragraphs: [
-            "Een zorgorganisatie had een duidelijk plan: een digitaal intakeplatform bouwen waarmee cliënten zich konden aanmelden en een coördinator ze kon koppelen aan de juiste begeleider. Geschatte bouwtijd: vier maanden. Budget: aanzienlijk.",
-            "In plaats van meteen het volledige platform te bouwen, ontwikkelde Focus First een gerichte digitale POC — een professionele werkende omgeving met een intake-flow, een coördinatorpaneel en geautomatiseerde opvolging. Geen Excel, geen improvisatie. Echte formulieren, echte data, een echte gebruikerservaring — maar gefocust op één vraag: werkt de kern?",
-            "Wat de data toonde: families doorliepen de intake zonder problemen. Maar ze keerden terug — niet omdat er iets mis was, maar omdat ze niets hadden gehoord. De frustratie zat niet in de wachttijd, maar in de stilte erna. Dat inzicht stond nergens in de oorspronkelijke spec. Het zat in het gedrag dat de POC zichtbaar maakte.",
-            "Op basis van die data werd bijgestuurd nog vóór er een volwaardig platform stond. Het uiteindelijke systeem had minder matchinglogica dan gepland — maar stuurde families meteen een statusbevestiging. Dat ene element veranderde de ervaring volledig. De POC maakte het mogelijk om dat te weten vóór de grote investering, niet erna.",
+            "Een zorgorganisatie wilde een digitaal intakeplatform bouwen — minder papier, snellere koppeling van cliënten aan begeleiders. Geschatte bouwtijd: vier maanden. Budget: aanzienlijk.",
+            "Focus First was er van bij het begin. Niet om het platform te bouwen, maar om eerst de juiste vraag te stellen: wat moet bewezen zijn voordat die investering zin heeft? Vanuit die vraag werd de scope bepaald, het experiment opgezet en de testomgeving gebouwd.",
+            "Geen vereenvoudigde versie, geen prototype op papier — een professionele digitale omgeving met een intake-flow, automatische opvolging en een werkend paneel voor de coördinator. Gebouwd om echte aanmeldingen te verwerken en te meten wat er gebeurde.",
+            "Wat er gebeurde, stond niet in de spec. Families doorliepen de intake vlot, maar kwamen daarna terug — telefonisch, ongerust. Niet omdat er iets misging, maar omdat ze niets hoorden. De wachttijd was niet het probleem. De stilte was het probleem.",
+            "Tegelijk toonde de data iets anders: de matchinglogica die de coördinator dagelijks handmatig uitvoerde, bleek volledig automatiseerbaar. Een AI-functie nam dat over. De coördinator volgde niet langer aanmeldingen op — die tijd ging naar de gesprekken die je niet kunt automatiseren.",
+            "Het platform dat uiteindelijk gebouwd werd, zag er anders uit dan gepland. Eenvoudiger op sommige vlakken, slimmer op andere. Maar het klopte — omdat de testfase had uitgewezen wat echt telde.",
           ],
         },
         {
@@ -97,10 +99,12 @@ export const blogPosts: BlogPost[] = [
         {
           heading: "What early testing actually delivers — a real example",
           paragraphs: [
-            "A care organization had a clear plan: build a digital intake platform where clients could register and a coordinator could match them to the right caregiver. Estimated build time: four months. Budget: significant.",
-            "Instead of building the full platform straight away, Focus First developed a focused digital POC — a professional, fully working environment with an intake flow, a coordinator panel, and automated follow-up. No spreadsheets, no improvisation. Real forms, real data, a real user experience — scoped around one question: does the core work?",
-            "What the data showed: families completed the intake without friction. But they came back — not because something went wrong, but because they hadn't heard anything. The frustration wasn't the wait. It was the silence that followed. That insight wasn't in the original spec. It was in the behaviour the POC made visible.",
-            "Adjustments were made before a full platform was ever built. The final system had less matching logic than planned — but it sent families an immediate status confirmation. That single element changed the experience entirely. The POC made it possible to know that before the big investment, not after.",
+            "A care organization wanted to build a digital intake platform — less paperwork, faster matching of clients to caregivers. Estimated build time: four months. Budget: significant.",
+            "Focus First was involved from the very start. Not to build the platform, but to ask the right question first: what needs to be proven before that investment makes sense? From that question, the scope was defined, the experiment set up, and the test environment built.",
+            "Not a simplified version, not a paper prototype — a professional digital environment with an intake flow, automated follow-up, and a working panel for the coordinator. Built to process real registrations and measure what actually happened.",
+            "What happened wasn't in the spec. Families moved through the intake without trouble, then called back — anxious, uncertain. Not because something had gone wrong, but because they hadn't heard anything. The wait wasn't the problem. The silence was.",
+            "The data also revealed something else: the matching logic the coordinator handled manually every day was fully automatable. An AI function took it over. The coordinator stopped tracking registrations — that time went to the conversations you can't automate.",
+            "The platform that was eventually built looked different from what had been planned. Simpler in some ways, smarter in others. But it was right — because the test phase had shown what actually mattered.",
           ],
         },
         {
