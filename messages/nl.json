@@ -28,7 +28,7 @@
   "blog": {
     "eyebrow": "Inzichten",
     "title": "Blog",
-    "subtitle": "Korte stukken over focus, sneller conceptualiseren en waarom een proof of concept loont — herbruikbaar als post of newsletter.",
+    "subtitle": "Inzichten over focus houden, sneller conceptualiseren en ideeën eerlijk testen met een proof of concept.",
     "readLabel": "Lees artikel",
     "backLabel": "Terug naar blog",
     "otherLabel": "Meer artikels",
@@ -131,7 +131,7 @@
         "context": "Greenlight BV is een gecertificeerd studie- & adviesbureau in Meise voor bos-, park-, natuur- en boombeheer (o.a. European Tree Technician & VETcert), met 25 jaar traject van boomverzorging naar breder groenadvies — inclusief Treepin als digitaal product.",
         "problem": "Expertise en diensten (beheeradvies, boomexpertise, Natura 2000, houtverkoop, populierenteelt, uitvoering) waren sterk in de praktijk, maar digitaal onvoldoende gebundeld. Overheden en private opdrachtgevers hadden een professioneel, vertrouwenwekkend startpunt nodig.",
         "approach": "We positioneerden Greenlight als studie- & adviesbureau met natuurlijke beeldtaal, certificeringsbadges en een helder dienstenraster. Treepin en partners kregen een plek in de navigatie zonder de kern — advies & begeleiding — te verdringen.",
-        "solution": "Corporate website met full-bleed hero, dienstenkaarten, over Greenlight, klantsegmenten en contact-CTA. Responsive, SEO-vriendelijke basis (title/description) en koppeling naar het bredere ecosysteem (o.a. Treepin).",
+        "solution": "Corporate website met full-bleed hero, dienstenkaarten, over Greenlight, klantsegmenten en contact-CTA. Responsive, duidelijk vindbaar online, en gekoppeld aan het bredere ecosysteem (o.a. Treepin).",
         "outcome": "greenlightbeheer.be maakt 25 jaar ervaring en het dienstenportfolio zichtbaar voor overheden, bosgroepen en private eigenaars — met een professionele eerste indruk die aansluit bij het veldwerk en de digitale tools."
       },
       "multiplugin": {
@@ -276,7 +276,7 @@
       "formMessageLabel": "Vertel kort over je project",
       "formMessagePlaceholder": "Waar loop je tegenaan, en wat zou je willen testen?",
       "formSubmitLabel": "Verstuur via e-mail",
-      "formNote": "Emails worden veilig verstuurd via Resend.",
+      "formNote": "Je bericht wordt veilig verzonden.",
       "formSubject": "Nieuwe projectaanvraag via focusfirst.be",
       "consentLabel": "Ik ga akkoord met de verwerking van mijn contactgegevens door Focus First Digital Lab om mijn vraag te beantwoorden. Dit is los van cookie-instellingen voor website-statistieken. Meer info in het",
       "consentLabelLink1": "privacybeleid",

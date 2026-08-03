@@ -283,9 +283,7 @@ export default function IntakeForm() {
           </div>
         )}
 
-        <p className="mt-3 text-xs text-medium-gray">
-          Emails are sent securely via Resend.
-        </p>
+        <p className="mt-3 text-xs text-medium-gray">{t("formNote")}</p>
       </div>
     </form>
   );

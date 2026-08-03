@@ -28,7 +28,7 @@
   "blog": {
     "eyebrow": "Insights",
     "title": "Blog",
-    "subtitle": "Short pieces on focus, conceptualizing faster, and why a proof of concept pays off — reusable as a post or newsletter.",
+    "subtitle": "Insights on staying focused, conceptualizing faster, and testing ideas fairly with a proof of concept.",
     "readLabel": "Read article",
     "backLabel": "Back to blog",
     "otherLabel": "More articles",
@@ -131,7 +131,7 @@
         "context": "Greenlight BV is a certified study & consultancy practice in Meise for forest, park, nature, and tree management (including European Tree Technician & VETcert), with a 25-year path from tree care to broader green advice — including Treepin as a digital product.",
         "problem": "Expertise and services (management advice, tree expertise, Natura 2000, timber sales, poplar cultivation, execution) were strong in the field, but not clearly bundled online. Public and private clients needed a professional, trust-building starting point.",
         "approach": "We positioned Greenlight as a study & consultancy with natural imagery, certification badges, and a clear services grid. Treepin and partners got a place in navigation without crowding out the core — advice and guidance.",
-        "solution": "A corporate website with full-bleed hero, service cards, about section, client segments, and contact CTA. Responsive, SEO-friendly basics (title/description), and links into the wider ecosystem (including Treepin).",
+        "solution": "A corporate website with full-bleed hero, service cards, about section, client segments, and contact CTA. Responsive, easy to find online, and linked into the wider ecosystem (including Treepin).",
         "outcome": "greenlightbeheer.be makes 25 years of experience and the service portfolio visible to governments, forest groups, and private owners — with a professional first impression that matches the fieldwork and digital tools."
       },
       "multiplugin": {
@@ -276,7 +276,7 @@
       "formMessageLabel": "Tell me briefly about your project",
       "formMessagePlaceholder": "What are you running into, and what would you like to test?",
       "formSubmitLabel": "Send via email",
-      "formNote": "Emails are sent securely via Resend.",
+      "formNote": "Your message is sent securely.",
       "formSubject": "New project inquiry via focusfirst.be",
       "consentLabel": "I agree to Focus First Digital Lab processing my contact information to answer my question. This is separate from cookie settings for website statistics. More info in the",
       "consentLabelLink1": "privacy policy",
