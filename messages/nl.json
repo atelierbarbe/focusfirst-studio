@@ -4,7 +4,7 @@
     "title": "Focus First - Digital Lab",
     "description": "Van idee naar werkend proof of concept in 6–8 weken. Analyse, bouw, test en go-live met AI als accelerator — zonder concessies op kwaliteit.",
     "contactTitle": "Contact",
-    "contactDescription": "Vertel over je project en krijg een eerste inschatting. Focus First Digital Lab — snelle route van concept naar prototype.",
+    "contactDescription": "Vertel over je project. Focus First Digital Lab — snelle route van concept naar prototype.",
     "privacyDescription": "Hoe Focus First Digital Lab persoonsgegevens verzamelt, gebruikt en beschermt.",
     "cookiesDescription": "Welke cookies we gebruiken, waarom, en hoe je toestemming beheert.",
     "termsDescription": "Algemene voorwaarden voor diensten van Focus First Digital Lab.",
@@ -186,6 +186,7 @@
     "intro": "Geef elk idee een kans. Focus First biedt betaalbare oplossingen om op korte termijn tot een werkend resultaat te komen.",
     "ctaLabel": "Scope je project",
     "typeLabel": "Soort project",
+    "serviceIntro": "Focus First biedt ook de tools aan om je digitale projecten op de rails te zetten: domeinnamen, hosting, databases, API-integraties. Bij een eerste analyse krijg je een volledig gedocumenteerd voorstel hoe we je ideeën online tot leven brengen.",
     "priceNote": "* Prijsindicatie — een preciezere inschatting volgt na de eerste analyse.",
     "tiers": [
       {
@@ -244,9 +245,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Vertel me over je project",
-    "subtitle": "Beantwoord drie korte vragen en je krijgt meteen een eerste inschatting. Daarna stuur je je gegevens door — we reageren persoonlijk.",
-    "serviceIntro": "Focus First biedt ook de tools aan om je digitale projecten op de rails te zetten: domeinnamen, hosting, databases, API-integraties. Bij een eerste analyse krijg je een volledig gedocumenteerd voorstel hoe we je ideeën online tot leven brengen.",
+    "title": "Vertel ons over jullie project. Geef ons inkijk in jullie idee",
+    "subtitle": "Beantwoord een paar korte vragen en wij gaan onmiddellijk voor jou aan de slag.",
     "intake": {
       "orgLabel": "Wat voor organisatie ben je?",
       "orgOptions": [
@@ -255,11 +255,39 @@
         { "value": "startup", "label": "Startup" },
         { "value": "nonprofit", "label": "Non-profit" }
       ],
+      "sectorLabel": "In welke sector zit je?",
+      "sectorPlaceholder": "bijv. gezondheidszorg, logistiek, onderwijs, financiën, e-commerce…",
+      "budgetLabel": "Wat is je budget-comfort?",
+      "budgetOptions": [
+        { "value": "small", "label": "€3–5K (klein experiment)" },
+        { "value": "medium", "label": "€8–12K (prototype)" },
+        { "value": "large", "label": "€15–25K+ (volledige build)" },
+        { "value": "flexible", "label": "Nog onzeker" }
+      ],
+      "ambitionLabel": "Wat is je ambitie?",
+      "ambitionIntro": "Hoe zie je je idee groeien?",
+      "ambitionOptions": [
+        {
+          "value": "process",
+          "label": "Proces fine-tunen",
+          "description": "Interne efficiency verhogen"
+        },
+        {
+          "value": "sector",
+          "label": "Sector voorthelpen",
+          "description": "Nieuwe standaard zetten"
+        },
+        {
+          "value": "world",
+          "label": "Wereld veranderen",
+          "description": "Maatschappelijk effect"
+        }
+      ],
       "scopeLabel": "Wat wil je testen of bouwen?",
       "scopeOptions": [
-        { "value": "quick", "tierName": "Basic", "label": "Een klein, afgebakend stuk werk — koppeling, script of dashboard" },
-        { "value": "mvp", "tierName": "Digital+", "label": "Een volledig prototype, front- en backend" },
-        { "value": "smart", "tierName": "Smart+", "label": "Iets met hardware of complexere integraties" }
+        { "value": "quick", "label": "Een klein, afgebakend stuk werk — koppeling, script of dashboard" },
+        { "value": "mvp", "label": "Een volledig prototype, front- en backend" },
+        { "value": "smart", "label": "Iets met hardware of complexere integraties" }
       ],
       "timelineLabel": "Wanneer wil je van start?",
       "timelineOptions": [
@@ -267,10 +295,6 @@
         { "value": "months", "label": "Binnen 1–2 maanden" },
         { "value": "exploring", "label": "Ik verken nog opties" }
       ],
-      "estimateHeading": "Eerste inschatting",
-      "estimatePlaceholder": "Kies hierboven een scope om een inschatting te zien.",
-      "estimateDuration": "doorlooptijd",
-      "estimateNote": "Dit is een eerste richtprijs — de exacte scope bepalen we samen.",
       "formNameLabel": "Naam",
       "formEmailLabel": "E-mail",
       "formMessageLabel": "Vertel kort over je project",
@@ -284,7 +308,10 @@
       "consentLabelLink2": "cookiebeleid",
       "consentRequired": "Accepteer de verwerking van je contactgegevens om door te gaan",
       "sending": "Verzenden…",
-      "success": "Bedankt! We hebben je aanvraag ontvangen en nemen binnen 24 uur contact op.",
+      "successEyebrow": "Even geduld",
+      "successTitle": "Wij gaan voor jou aan de slag.",
+      "successBody": "Wij analyseren je info en bekijken hoe we jullie vooruit kunnen helpen met jullie idee.",
+      "successRedirect": "Je gaat zo terug naar home…",
       "errorPrefix": "Fout:",
       "errorRetry": "Probeer opnieuw.",
       "fillAll": "Vul alle velden in"

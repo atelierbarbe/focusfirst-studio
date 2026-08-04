@@ -1,18 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { Coins, Rocket, Tag, type LucideIcon } from "lucide-react";
 
-type SubmitStatus = "idle" | "loading" | "success" | "error";
+type SubmitStatus = "idle" | "loading" | "error";
 
 type Option = { value: string; label: string };
-type ScopeOption = Option & { tierName: string };
-type Tier = {
-  name: string;
-  price: string;
-  duration: string;
-  description: string;
+type AmbitionOption = Option & { description: string };
+
+const AMBITION_TINTS: Record<string, string> = {
+  process: "bg-[#f0eee8]",
+  sector: "bg-accent-light",
+  world: "bg-[#e8f0ec]",
 };
+
+function FieldHeading({
+  icon: Icon,
+  children,
+}: {
+  icon?: LucideIcon;
+  children: ReactNode;
+}) {
+  return (
+    <legend className="flex items-center gap-2 text-sm font-semibold text-near-black">
+      {Icon ? (
+        <Icon className="size-4 shrink-0 text-accent" aria-hidden="true" strokeWidth={1.75} />
+      ) : null}
+      {children}
+    </legend>
+  );
+}
 
 function RadioGroup({
   legend,
@@ -20,16 +38,18 @@ function RadioGroup({
   options,
   value,
   onChange,
+  icon,
 }: {
   legend: string;
   name: string;
   options: Option[];
   value: string;
   onChange: (value: string) => void;
+  icon?: LucideIcon;
 }) {
   return (
     <fieldset>
-      <legend className="text-sm font-semibold text-near-black">{legend}</legend>
+      <FieldHeading icon={icon}>{legend}</FieldHeading>
       <div className="mt-3 grid gap-3 sm:grid-cols-2">
         {options.map((opt) => (
           <label
@@ -52,17 +72,78 @@ function RadioGroup({
   );
 }
 
-export default function IntakeForm() {
+function AmbitionGroup({
+  legend,
+  intro,
+  name,
+  options,
+  value,
+  onChange,
+}: {
+  legend: string;
+  intro: string;
+  name: string;
+  options: AmbitionOption[];
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <fieldset>
+      <FieldHeading icon={Rocket}>{legend}</FieldHeading>
+      <p className="mt-2 text-sm text-dark-gray">{intro}</p>
+      <div className="mt-3 grid gap-3 sm:grid-cols-3">
+        {options.map((opt) => {
+          const selected = value === opt.value;
+          const tint = AMBITION_TINTS[opt.value] ?? "bg-cream";
+          return (
+            <label
+              key={opt.value}
+              className={`flex cursor-pointer flex-col rounded border p-3 text-sm transition-colors ${tint} ${
+                selected
+                  ? "border-near-black text-near-black"
+                  : "border-light-gray text-dark-gray hover:border-medium-gray"
+              }`}
+              style={{ borderWidth: "0.5px" }}
+            >
+              <input
+                type="radio"
+                name={name}
+                value={opt.value}
+                checked={selected}
+                onChange={() => onChange(opt.value)}
+                className="sr-only"
+                required
+              />
+              <span className="font-semibold text-near-black">{opt.label}</span>
+              <span className="mt-1 text-xs leading-relaxed text-dark-gray">
+                {opt.description}
+              </span>
+            </label>
+          );
+        })}
+      </div>
+    </fieldset>
+  );
+}
+
+export default function IntakeForm({
+  onSuccess,
+}: {
+  onSuccess?: () => void;
+}) {
   const t = useTranslations("contact.intake");
-  const tPricing = useTranslations("pricing");
   const locale = useLocale();
 
   const orgOptions = t.raw("orgOptions") as Option[];
-  const scopeOptions = t.raw("scopeOptions") as ScopeOption[];
+  const budgetOptions = t.raw("budgetOptions") as Option[];
+  const ambitionOptions = t.raw("ambitionOptions") as AmbitionOption[];
+  const scopeOptions = t.raw("scopeOptions") as Option[];
   const timelineOptions = t.raw("timelineOptions") as Option[];
-  const tiers = tPricing.raw("tiers") as Tier[];
 
   const [org, setOrg] = useState("");
+  const [sector, setSector] = useState("");
+  const [budget, setBudget] = useState("");
+  const [ambition, setAmbition] = useState("");
   const [scope, setScope] = useState("");
   const [timeline, setTimeline] = useState("");
   const [name, setName] = useState("");
@@ -72,15 +153,19 @@ export default function IntakeForm() {
   const [submitError, setSubmitError] = useState("");
   const [consent, setConsent] = useState(false);
 
-  const selectedScope = scopeOptions.find((o) => o.value === scope);
-  const matchedTier = selectedScope
-    ? tiers.find((tier) => tier.name === selectedScope.tierName)
-    : undefined;
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!org || !scope || !timeline || !name || !email || !message) {
+    if (
+      !org ||
+      !budget ||
+      !ambition ||
+      !scope ||
+      !timeline ||
+      !name ||
+      !email ||
+      !message
+    ) {
       setSubmitError(t("fillAll"));
       return;
     }
@@ -94,7 +179,13 @@ export default function IntakeForm() {
     setSubmitError("");
 
     const orgLabel = orgOptions.find((o) => o.value === org)?.label ?? "";
-    const scopeLabel = selectedScope?.label ?? "";
+    const budgetLabel =
+      budgetOptions.find((o) => o.value === budget)?.label ?? "";
+    const ambitionOption = ambitionOptions.find((o) => o.value === ambition);
+    const ambitionLabel = ambitionOption
+      ? `${ambitionOption.label} — ${ambitionOption.description}`
+      : "";
+    const scopeLabel = scopeOptions.find((o) => o.value === scope)?.label ?? "";
     const timelineLabel =
       timelineOptions.find((o) => o.value === timeline)?.label ?? "";
 
@@ -104,6 +195,11 @@ export default function IntakeForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           org,
+          sector,
+          budget,
+          budgetLabel,
+          ambition,
+          ambitionLabel,
           scope,
           timeline,
           name,
@@ -112,8 +208,6 @@ export default function IntakeForm() {
           orgLabel,
           scopeLabel,
           timelineLabel,
-          tierName: matchedTier?.name,
-          tierPrice: matchedTier?.price,
           consent,
         }),
       });
@@ -125,16 +219,7 @@ export default function IntakeForm() {
         throw new Error(payload?.error || t("errorRetry"));
       }
 
-      setSubmitStatus("success");
-      setOrg("");
-      setScope("");
-      setTimeline("");
-      setName("");
-      setEmail("");
-      setMessage("");
-      setConsent(false);
-
-      setTimeout(() => setSubmitStatus("idle"), 5000);
+      onSuccess?.();
     } catch (error) {
       setSubmitStatus("error");
       setSubmitError(
@@ -152,6 +237,43 @@ export default function IntakeForm() {
         value={org}
         onChange={setOrg}
       />
+
+      <div>
+        <label
+          htmlFor="sector"
+          className="flex items-center gap-2 text-sm font-semibold text-near-black"
+        >
+          <Tag className="size-4 shrink-0 text-accent" aria-hidden="true" strokeWidth={1.75} />
+          {t("sectorLabel")}
+        </label>
+        <input
+          id="sector"
+          type="text"
+          value={sector}
+          onChange={(e) => setSector(e.target.value)}
+          placeholder={t("sectorPlaceholder")}
+          className="mt-3 w-full rounded border border-light-gray bg-white px-4 py-3 text-sm text-near-black outline-none transition-colors placeholder:text-medium-gray focus:border-near-black"
+        />
+      </div>
+
+      <RadioGroup
+        legend={t("budgetLabel")}
+        name="budget"
+        options={budgetOptions}
+        value={budget}
+        onChange={setBudget}
+        icon={Coins}
+      />
+
+      <AmbitionGroup
+        legend={t("ambitionLabel")}
+        intro={t("ambitionIntro")}
+        name="ambition"
+        options={ambitionOptions}
+        value={ambition}
+        onChange={setAmbition}
+      />
+
       <RadioGroup
         legend={t("scopeLabel")}
         name="scope"
@@ -159,6 +281,7 @@ export default function IntakeForm() {
         value={scope}
         onChange={setScope}
       />
+
       <RadioGroup
         legend={t("timelineLabel")}
         name="timeline"
@@ -166,25 +289,6 @@ export default function IntakeForm() {
         value={timeline}
         onChange={setTimeline}
       />
-
-      <div className="rounded-lg border border-light-gray bg-light-gray/40 p-6">
-        <h3 className="font-mono text-xs uppercase tracking-wider text-accent">
-          {t("estimateHeading")}
-        </h3>
-        {matchedTier ? (
-          <div className="mt-3">
-            <p className="text-2xl font-semibold text-near-black">
-              {matchedTier.name} · {matchedTier.price}
-            </p>
-            <p className="mt-1 text-sm text-dark-gray">
-              {matchedTier.duration} {t("estimateDuration")}
-            </p>
-            <p className="mt-3 text-sm text-medium-gray">{t("estimateNote")}</p>
-          </div>
-        ) : (
-          <p className="mt-3 text-sm text-dark-gray">{t("estimatePlaceholder")}</p>
-        )}
-      </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
@@ -268,12 +372,6 @@ export default function IntakeForm() {
         >
           {submitStatus === "loading" ? t("sending") : t("formSubmitLabel")}
         </button>
-
-        {submitStatus === "success" && (
-          <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-4">
-            <p className="text-sm text-green-800">{t("success")}</p>
-          </div>
-        )}
 
         {submitStatus === "error" && (
           <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">

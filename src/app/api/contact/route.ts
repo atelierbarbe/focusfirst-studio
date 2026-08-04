@@ -12,18 +12,24 @@ import {
 
 const isProduction = process.env.NODE_ENV === "production";
 
+const ALLOWED_BUDGET = new Set(["small", "medium", "large", "flexible"]);
+const ALLOWED_AMBITION = new Set(["process", "sector", "world"]);
+
 interface ContactFormData {
   org?: string;
   scope?: string;
   timeline?: string;
+  sector?: string;
+  budget?: string;
+  budgetLabel?: string;
+  ambition?: string;
+  ambitionLabel?: string;
   name?: string;
   email?: string;
   message?: string;
   orgLabel?: string;
   scopeLabel?: string;
   timelineLabel?: string;
-  tierName?: string;
-  tierPrice?: string;
   consent?: boolean | string;
 }
 
@@ -41,8 +47,11 @@ export async function POST(request: Request) {
     const orgLabel = trimString(body.orgLabel);
     const scopeLabel = trimString(body.scopeLabel);
     const timelineLabel = trimString(body.timelineLabel);
-    const tierName = trimString(body.tierName);
-    const tierPrice = trimString(body.tierPrice);
+    const sector = trimString(body.sector);
+    const budget = trimString(body.budget, 32);
+    const budgetLabel = trimString(body.budgetLabel);
+    const ambition = trimString(body.ambition, 32);
+    const ambitionLabel = trimString(body.ambitionLabel);
 
     if (
       !name ||
@@ -50,7 +59,11 @@ export async function POST(request: Request) {
       !message ||
       !orgLabel ||
       !scopeLabel ||
-      !timelineLabel
+      !timelineLabel ||
+      !budgetLabel ||
+      !ambitionLabel ||
+      !ALLOWED_BUDGET.has(budget) ||
+      !ALLOWED_AMBITION.has(ambition)
     ) {
       return publicApiError("Vul alle verplichte velden in.");
     }
@@ -61,9 +74,6 @@ export async function POST(request: Request) {
       );
     }
 
-    const estimate =
-      tierName && tierPrice ? `${tierName} (${tierPrice})` : undefined;
-
     const result = await sendFormEmails({
       notifySubject: `Nieuwe projectaanvraag — ${name}`,
       notifyTitle: "Nieuwe projectaanvraag",
@@ -73,9 +83,11 @@ export async function POST(request: Request) {
         Naam: name,
         "E-mail": email,
         Organisatie: orgLabel,
+        Sector: sector || "—",
+        "Budget-comfort": budgetLabel,
+        Ambitie: ambitionLabel,
         Scope: scopeLabel,
         Timing: timelineLabel,
-        Inschatting: estimate,
         Bericht: message,
         "Privacy-toestemming": "Ja",
       },
@@ -83,7 +95,7 @@ export async function POST(request: Request) {
       customerName: name,
       customerSubject: "We hebben je projectaanvraag ontvangen — Focus First",
       customerIntro:
-        "Bedankt voor je bericht. We bekijken je aanvraag en nemen binnen 24 uur persoonlijk contact op.",
+        "Bedankt voor je bericht. Je aanvraag is goed aangekomen — we houden de focus op wat jij wilt bereiken.",
       replyTo: email,
     });
 

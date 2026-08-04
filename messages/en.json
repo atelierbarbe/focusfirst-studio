@@ -4,7 +4,7 @@
     "title": "Focus First - Digital Lab",
     "description": "From idea to working proof of concept in 6–8 weeks. Analysis, build, test, and go-live with AI as an accelerator — without cutting corners on quality.",
     "contactTitle": "Contact",
-    "contactDescription": "Tell us about your project and get a first estimate. Focus First Digital Lab — the fast path from concept to prototype.",
+    "contactDescription": "Tell us about your project. Focus First Digital Lab — the fast path from concept to prototype.",
     "privacyDescription": "How Focus First Digital Lab collects, uses, and protects personal data.",
     "cookiesDescription": "Which cookies we use, why, and how you manage consent.",
     "termsDescription": "Terms of service for Focus First Digital Lab.",
@@ -186,6 +186,7 @@
     "intro": "Give every idea a chance. Focus First offers affordable solutions to reach a working result on short notice.",
     "ctaLabel": "Scope your project",
     "typeLabel": "Project type",
+    "serviceIntro": "Focus First also provides the tools to get your digital projects off the ground: domain names, hosting, databases, API integrations. After an initial analysis, you'll get a fully documented proposal on how we can bring your ideas online.",
     "priceNote": "* Price indication — a more precise estimate follows after the initial analysis.",
     "tiers": [
       {
@@ -244,9 +245,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Tell me about your project",
-    "subtitle": "Answer three quick questions and get an instant estimate. Then send over your details — we reply personally.",
-    "serviceIntro": "Focus First also provides the tools to get your digital projects off the ground: domain names, hosting, databases, API integrations. After an initial analysis, you'll get a fully documented proposal on how we can bring your ideas online.",
+    "title": "Tell us about your project. Give us a look into your idea",
+    "subtitle": "Answer a few short questions and we'll get to work for you right away.",
     "intake": {
       "orgLabel": "What kind of organization are you?",
       "orgOptions": [
@@ -255,11 +255,39 @@
         { "value": "startup", "label": "Startup" },
         { "value": "nonprofit", "label": "Nonprofit" }
       ],
+      "sectorLabel": "What sector are you in?",
+      "sectorPlaceholder": "e.g., healthcare, logistics, education, finance, e-commerce…",
+      "budgetLabel": "What's your budget comfort?",
+      "budgetOptions": [
+        { "value": "small", "label": "€3–5K (small experiment)" },
+        { "value": "medium", "label": "€8–12K (prototype)" },
+        { "value": "large", "label": "€15–25K+ (full build)" },
+        { "value": "flexible", "label": "Still exploring" }
+      ],
+      "ambitionLabel": "What's your ambition?",
+      "ambitionIntro": "How do you see your idea grow?",
+      "ambitionOptions": [
+        {
+          "value": "process",
+          "label": "Optimize a process",
+          "description": "Improve internal efficiency"
+        },
+        {
+          "value": "sector",
+          "label": "Move the sector forward",
+          "description": "Set a new standard"
+        },
+        {
+          "value": "world",
+          "label": "Change the world",
+          "description": "Create societal impact"
+        }
+      ],
       "scopeLabel": "What do you want to test or build?",
       "scopeOptions": [
-        { "value": "quick", "tierName": "Basic", "label": "One small, well-defined piece of work — integration, script, or dashboard" },
-        { "value": "mvp", "tierName": "Digital+", "label": "A full prototype, front and back end" },
-        { "value": "smart", "tierName": "Smart+", "label": "Something with hardware or more complex integrations" }
+        { "value": "quick", "label": "One small, well-defined piece of work — integration, script, or dashboard" },
+        { "value": "mvp", "label": "A full prototype, front and back end" },
+        { "value": "smart", "label": "Something with hardware or more complex integrations" }
       ],
       "timelineLabel": "When do you want to start?",
       "timelineOptions": [
@@ -267,10 +295,6 @@
         { "value": "months", "label": "Within 1–2 months" },
         { "value": "exploring", "label": "Still exploring options" }
       ],
-      "estimateHeading": "First estimate",
-      "estimatePlaceholder": "Pick a scope above to see an estimate.",
-      "estimateDuration": "turnaround",
-      "estimateNote": "This is a first ballpark — we'll pin down the exact scope together.",
       "formNameLabel": "Name",
       "formEmailLabel": "Email",
       "formMessageLabel": "Tell me briefly about your project",
@@ -284,7 +308,10 @@
       "consentLabelLink2": "cookie policy",
       "consentRequired": "Accept the processing of your contact information to continue",
       "sending": "Sending…",
-      "success": "Thanks! We've received your inquiry and will be in touch within 24 hours.",
+      "successEyebrow": "One moment",
+      "successTitle": "We're getting to work for you.",
+      "successBody": "We're reviewing your info and looking at how we can move your idea forward.",
+      "successRedirect": "Taking you back home…",
       "errorPrefix": "Error:",
       "errorRetry": "Please try again.",
       "fillAll": "Please fill in all fields"

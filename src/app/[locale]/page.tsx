@@ -18,7 +18,6 @@ type CaseStudy = { slug: string; title: string; description: string };
 type Audience = { name: string; description: string; proposals: string[] };
 type PricingTier = {
   name: string;
-  price: string;
   description: string;
   features: string[];
 };
@@ -210,10 +209,6 @@ export default async function Home({
                     {tPricing("typeLabel")}
                   </p>
                   <h3 className="mt-1 text-lg font-semibold">{tier.name}</h3>
-                  <p className="mt-2 text-3xl font-semibold">
-                    {tier.price}
-                    <span className="align-top text-base">*</span>
-                  </p>
                   <p
                     className={`mt-3 text-sm ${
                       featured ? "text-white/70" : "text-dark-gray"
@@ -243,7 +238,9 @@ export default async function Home({
               );
             })}
           </div>
-          <p className="mt-6 text-sm text-medium-gray">{tPricing("priceNote")}</p>
+          <p className="mt-10 max-w-2xl text-sm leading-relaxed text-dark-gray">
+            {tPricing("serviceIntro")}
+          </p>
         </div>
       </section>
 

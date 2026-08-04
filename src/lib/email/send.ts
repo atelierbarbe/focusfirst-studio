@@ -1,6 +1,10 @@
 import { Resend } from "resend";
 import { getEmailConfig } from "./config";
-import { buildEmailHtml, formatFieldRows } from "./format";
+import {
+  buildCustomerEmailHtml,
+  buildEmailHtml,
+  formatFieldRows,
+} from "./format";
 
 type SendPairOptions = {
   notifySubject: string;
@@ -50,11 +54,25 @@ export async function sendFormEmails(
     return { ok: false, error: notifyError.message };
   }
 
-  const customerHtml = buildEmailHtml(
-    "Bedankt voor je aanvraag",
+  const customerHtml = buildCustomerEmailHtml({
+    name: options.customerName,
+    intro: options.customerIntro,
+  });
+  const firstName =
+    options.customerName.trim().split(/\s+/)[0] || options.customerName;
+  const customerText = [
+    `Hallo ${firstName},`,
+    "",
     options.customerIntro,
-    formatFieldRows({ Naam: options.customerName })
-  );
+    "",
+    "Wat volgt",
+    "We lezen je aanvraag aandachtig en nemen binnen 24 uur persoonlijk contact op.",
+    "",
+    "Met vriendelijke groet,",
+    "Focus First",
+    "",
+    "focusfirst.be — Focus First Digital Lab",
+  ].join("\n");
 
   const { error: customerError } = await resend.emails.send({
     from: config.from,
@@ -62,7 +80,7 @@ export async function sendFormEmails(
     replyTo: [config.notifyTo],
     subject: options.customerSubject,
     html: customerHtml,
-    text: `${options.customerIntro}\n\nMet vriendelijke groet,\nFocus First`,
+    text: customerText,
   });
 
   if (customerError) {
