@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Focus First - Digital Lab",
     "title": "Focus First - Digital Lab",
-    "description": "Van idee naar werkend proof of concept in 6–8 weken. Analyse, bouw, test en go-live met AI als accelerator — zonder concessies op kwaliteit.",
+    "description": "Van idee naar werkend proof of concept — in weken, niet maanden. Domeinkennis, een strakke aanpak en AI als versneller. Iets echts om te testen, zonder in te leveren op kwaliteit.",
     "contactTitle": "Contact",
     "contactDescription": "Vertel over je project. Focus First Digital Lab — snelle route van concept naar prototype.",
     "privacyDescription": "Hoe Focus First Digital Lab persoonsgegevens verzamelt, gebruikt en beschermt.",
@@ -40,9 +40,9 @@
   "hero": {
     "eyebrow": "Digital Lab",
     "title": "Focus First",
-    "tagline": "AI is een versneller. Kennis en aanpak bepalen de richting.",
-    "subtitle": "Voor al je digitale projecten combineren we beide om sneller van idee naar werkend proof of concept te komen — zonder in te leveren op kwaliteit.",
-    "cta": "Laten we praten"
+    "tagline": "Van idee naar werkend proof of concept — in weken, niet maanden.",
+    "subtitle": "We combineren domeinkennis, een strakke aanpak en AI als versneller. Jij krijgt iets echts om te testen — zonder in te leveren op kwaliteit.",
+    "cta": "Vertel ons over je project"
   },
   "process": {
     "eyebrow": "Zo werken we",
@@ -51,24 +51,24 @@
         "step": "01",
         "timeline": "",
         "title": "Analyse",
-        "description": "Voor elk idee is een digitale oplossing mogelijk. We onderzoeken je concept en bepalen samen de snelste route naar een werkend resultaat."
+        "description": "We onderzoeken je concept en zetten de snelste route naar een werkend resultaat uit. Scope blijft scherp: één belofte, één prototype."
       },
       {
         "step": "02",
         "timeline": "",
         "title": "Bouwen + testen",
-        "description": "We bouwen in korte cycli, testen met echte gebruikers, en sturen vroeg bij. Met AI als accelerator krijg je sneller iets werkends zonder concessies op kwaliteit."
+        "description": "Korte cycli, echte gebruikers, vroeg bijsturen. AI versnelt de bouw — kwaliteit en richting blijven van jou."
       },
       {
         "step": "03",
         "timeline": "",
-        "title": "Go Live + assistance",
-        "description": "We brengen het project live en blijven de eerste 30 dagen aan je zijde en optimaliseren waar nodig. Nadien kunnen we je blijven bijstaan voor onderhoud en up to date houden van je digitale infrastructuur zodat je project steeds de beste gebruikservaring krijgt."
+        "title": "Go Live + support",
+        "description": "We gaan live en blijven de eerste 30 dagen optimaliseren. Daarna houdt optioneel onderhoud je stack actueel en de ervaring scherp."
       }
     ]
   },
   "caseStudies": {
-    "eyebrow": "Wat we eerder bouwden",
+    "eyebrow": "Wat we bouwden",
     "viewLabel": "Bekijk case study",
     "prevLabel": "Vorige cases",
     "nextLabel": "Volgende cases",
@@ -76,28 +76,28 @@
     "items": [
       {
         "slug": "treepin",
-        "title": "Boominspecties voor Greenlightbeheer",
-        "description": "Inspecteurs werkten met papier en gps. Treepin is een tablet-app (Next.js + Capacitor) met offline sync, Mapbox-kaart en Supabase auth. Inspecties van €50–150 naar €10–30, klanten zien live inzage."
+        "title": "Boominspecties — Greenlightbeheer",
+        "description": "Papier en GPS-notities → Treepin tablet-app (offline sync, kaarten, live klantinzicht). Resultaat: inspecties van €50–150 naar €10–30."
       },
       {
         "slug": "studio-huis",
-        "title": "Website voor Studio Huis",
-        "description": "Renovatieadvies had een heldere digitale aanwezigheid nodig. We bouwden studiohuis.be: merksignaal eerst, duidelijke diensten, en een laagdrempelig contacttraject voor particuliere eigenaars."
+        "title": "Website — Studio Huis",
+        "description": "Renovatieadvies had een heldere digitale voordeur nodig. Resultaat: merksignaal-eerst site met duidelijke diensten en een laagdrempelig contacttraject voor eigenaars (studiohuis.be)."
       },
       {
         "slug": "greenlight-beheer",
-        "title": "Website voor Greenlight BV",
-        "description": "Een studie- & adviesbureau voor bos-, boom- en natuurbeheer wilde expertise en diensten scherp tonen. greenlightbeheer.be positioneert 25 jaar ervaring, certificeringen en het Treepin-ecosysteem."
+        "title": "Website — Greenlight BV",
+        "description": "Bos-, boom- en natuuradvies; 25 jaar expertise helder tonen. Resultaat: greenlightbeheer.be positioneert diensten, certificeringen en het Treepin-ecosysteem."
       },
       {
         "slug": "multiplugin",
         "title": "Multiplugin platform",
-        "description": "One-click actions in SketchUp: van box naar volledige corpus, van vlak naar uitgewerkte deur. Plus een extern platform voor materiaallijsten, materiaalbeheer en kostprijsberekening."
+        "description": "One-click SketchUp-acties: box → corpus, vlak → deur — plus materiaallijsten, beheer en kostprijsberekening. Resultaat: sneller detailleren en minder handmatig tellen voor meubelmakers."
       },
       {
         "slug": "iot-water-meters",
-        "title": "Waterverbruik volgen op de bouwplaats",
-        "description": "Watermeters werden met de hand afgelezen. Met LoRaWAN, gps en een dashboard zien projectleiders het verbruik nu live, zonder rondes langs de meter."
+        "title": "Waterverbruik op de bouwplaats",
+        "description": "Meters met de hand afgelezen → LoRaWAN, GPS en een live dashboard. Resultaat: projectleiders zien verbruik zonder rondgang langs de meter."
       }
     ],
     "detail": {
@@ -152,7 +152,7 @@
   },
   "audiences": {
     "eyebrow": "Voor wie",
-    "intro": "Wil je processen digitaliseren? Een thematisch interactief platform bouwen? Of eerst een idee testen voordat je erin investeert? Focus First is een digitale accelerator die je hierbij helpt — met de juiste kennis, aanpak en AI als versneller.",
+    "intro": "Een proces digitaliseren? Een interactief platform bouwen? Een idee testen voordat je investeert? Focus First is een digital lab dat je daar brengt — met de juiste kennis, een gerichte aanpak en AI waar het echt versnelt.",
     "examplesLabel": "Denk aan",
     "examples": [
       "Een vergunningenplatform",
@@ -182,33 +182,45 @@
     ]
   },
   "pricing": {
-    "eyebrow": "Duidelijke prijzen",
-    "intro": "Geef elk idee een kans. Focus First biedt betaalbare oplossingen om op korte termijn tot een werkend resultaat te komen.",
+    "eyebrow": "Zo prijzen we",
+    "intro": "Betaalbare paden naar een werkend resultaat — vaste scope na analyse, gedocumenteerd voorstel inbegrepen.",
     "ctaLabel": "Scope je project",
     "typeLabel": "Soort project",
-    "serviceIntro": "Focus First biedt ook de tools aan om je digitale projecten op de rails te zetten: domeinnamen, hosting, databases, API-integraties. Bij een eerste analyse krijg je een volledig gedocumenteerd voorstel hoe we je ideeën online tot leven brengen.",
+    "serviceIntro": "Focus First biedt ook hosting, domeinnamen, databases en API-integraties. Na de eerste analyse krijg je een gedocumenteerd voorstel om je idee online te brengen.",
     "priceNote": "* Prijsindicatie — een preciezere inschatting volgt na de eerste analyse.",
     "tiers": [
       {
         "name": "Basic",
         "price": "€ 3 tot 5 K",
         "duration": "2–3 weken",
-        "description": "Van een eenvoudige website tot een losstaande automatisering of plugin.",
-        "features": ["2–3 weken doorlooptijd", "Vaste prijs vooraf", "Code is van jou"]
+        "description": "Eenvoudige website, losstaande automatisering of plugin.",
+        "features": [
+          "2–3 weken doorlooptijd",
+          "Vaste prijs vooraf",
+          "Code is van jou"
+        ]
       },
       {
         "name": "Digital+",
         "price": "€ 8 tot 12 K",
         "duration": "6 weken",
-        "description": "Van eerste prototype tot een volledig werkend proof of concept.",
-        "features": ["6 weken doorlooptijd", "Analyse, bouw en oplevering", "30 dagen support inbegrepen"]
+        "description": "Eerste prototype tot volledig werkend proof of concept.",
+        "features": [
+          "6 weken doorlooptijd",
+          "Analyse, bouw en oplevering",
+          "30 dagen support inbegrepen"
+        ]
       },
       {
         "name": "Smart+",
         "price": "€ 15 tot 25 K",
         "duration": "8 weken",
-        "description": "Slimme full-stack platformen met AI-integratie. Van analyse tot volledige uitwerking.",
-        "features": ["8 weken doorlooptijd", "Hardware- en IoT-integratie", "30 dagen support inbegrepen"]
+        "description": "Slimme full-stack platformen met AI of IoT. Van analyse tot volledige uitwerking.",
+        "features": [
+          "8 weken doorlooptijd",
+          "Hardware- en IoT-integratie",
+          "30 dagen support inbegrepen"
+        ]
       }
     ]
   },
@@ -219,7 +231,7 @@
     "principles": [
       {
         "title": "Focus houden",
-        "description": "We snijden scope tot wat telt: één belofte, één prototype, geen omwegen. Zo blijft het idee scherp genoeg om écht te leren."
+        "description": "We snijden scope tot wat telt: één belofte, één prototype, geen omwegen. Het idee blijft scherp genoeg om écht te leren."
       },
       {
         "title": "Elke bedenker een kans",
@@ -227,11 +239,11 @@
       },
       {
         "title": "AI als versneller",
-        "description": "Vooruitgang in AI maakt sneller bouwen haalbaar. Dat opent ruimte voor meer experimenten — zonder in te leveren op kwaliteit of richting."
+        "description": "Vooruitgang in AI maakt sneller bouwen mogelijk. Dat opent ruimte voor meer experimenten — zonder in te leveren op kwaliteit of richting."
       }
     ],
     "howWeWorkTitle": "Hoe we werken",
-    "howWeWork": "We verbinden databases, API’s, data platforms en andere tools tot één geheel. Klein starten, snel iets werkends neerzetten, daarna verfijnen. Projecten die meegroeien met jouw vraag.",
+    "howWeWork": "Databases, API's en tools tot één geheel. Klein starten, snel shippen, meegroeien met de vraag.",
     "howWeWorkPoints": [
       "Integraties die tools laten samenwerken",
       "Proof of concept in weken, niet maanden",
@@ -250,19 +262,43 @@
     "intake": {
       "orgLabel": "Wat voor organisatie ben je?",
       "orgOptions": [
-        { "value": "public", "label": "Publieke sector" },
-        { "value": "company", "label": "Bedrijf of KMO" },
-        { "value": "startup", "label": "Startup" },
-        { "value": "nonprofit", "label": "Non-profit" }
+        {
+          "value": "public",
+          "label": "Publieke sector"
+        },
+        {
+          "value": "company",
+          "label": "Bedrijf of KMO"
+        },
+        {
+          "value": "startup",
+          "label": "Startup"
+        },
+        {
+          "value": "nonprofit",
+          "label": "Non-profit"
+        }
       ],
       "sectorLabel": "In welke sector zit je?",
       "sectorPlaceholder": "bijv. gezondheidszorg, logistiek, onderwijs, financiën, e-commerce…",
       "budgetLabel": "Wat is je budget-comfort?",
       "budgetOptions": [
-        { "value": "small", "label": "€3–5K (klein experiment)" },
-        { "value": "medium", "label": "€8–12K (prototype)" },
-        { "value": "large", "label": "€15–25K+ (volledige build)" },
-        { "value": "flexible", "label": "Nog onzeker" }
+        {
+          "value": "small",
+          "label": "€3–5K (klein experiment)"
+        },
+        {
+          "value": "medium",
+          "label": "€8–12K (prototype)"
+        },
+        {
+          "value": "large",
+          "label": "€15–25K+ (volledige build)"
+        },
+        {
+          "value": "flexible",
+          "label": "Nog onzeker"
+        }
       ],
       "ambitionLabel": "Wat is je ambitie?",
       "ambitionIntro": "Hoe zie je je idee groeien?",
@@ -285,15 +321,33 @@
       ],
       "scopeLabel": "Wat wil je testen of bouwen?",
       "scopeOptions": [
-        { "value": "quick", "label": "Een klein, afgebakend stuk werk — koppeling, script of dashboard" },
-        { "value": "mvp", "label": "Een volledig prototype, front- en backend" },
-        { "value": "smart", "label": "Iets met hardware of complexere integraties" }
+        {
+          "value": "quick",
+          "label": "Een klein, afgebakend stuk werk — koppeling, script of dashboard"
+        },
+        {
+          "value": "mvp",
+          "label": "Een volledig prototype, front- en backend"
+        },
+        {
+          "value": "smart",
+          "label": "Iets met hardware of complexere integraties"
+        }
       ],
       "timelineLabel": "Wanneer wil je van start?",
       "timelineOptions": [
-        { "value": "asap", "label": "Zo snel mogelijk" },
-        { "value": "months", "label": "Binnen 1–2 maanden" },
-        { "value": "exploring", "label": "Ik verken nog opties" }
+        {
+          "value": "asap",
+          "label": "Zo snel mogelijk"
+        },
+        {
+          "value": "months",
+          "label": "Binnen 1–2 maanden"
+        },
+        {
+          "value": "exploring",
+          "label": "Ik verken nog opties"
+        }
       ],
       "formNameLabel": "Naam",
       "formEmailLabel": "E-mail",
