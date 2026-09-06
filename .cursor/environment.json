@@ -1,0 +1,17 @@
+{
+  "name": "focusfirst-studio",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "next-dev",
+      "command": "npm run dev",
+      "description": "Next.js 16 development server (Turbopack) served on http://localhost:3000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}
