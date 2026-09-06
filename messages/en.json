@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Focus First - Digital Lab",
     "title": "Focus First - Digital Lab",
-    "description": "From idea to working proof of concept in 6–8 weeks. Analysis, build, test, and go-live with AI as an accelerator — without cutting corners on quality.",
+    "description": "From idea to working proof of concept — in weeks, not months. Domain knowledge, a tight approach, and AI as an accelerator. Something real to test, without cutting corners on quality.",
     "contactTitle": "Contact",
     "contactDescription": "Tell us about your project. Focus First Digital Lab — the fast path from concept to prototype.",
     "privacyDescription": "How Focus First Digital Lab collects, uses, and protects personal data.",
@@ -40,9 +40,9 @@
   "hero": {
     "eyebrow": "Digital Lab",
     "title": "Focus First",
-    "tagline": "AI is an accelerator. Knowledge and approach set the direction.",
-    "subtitle": "For all your digital projects, we combine both to get from idea to a working proof of concept faster — without cutting corners on quality.",
-    "cta": "Let's talk"
+    "tagline": "From idea to working proof of concept — in weeks, not months.",
+    "subtitle": "We combine domain knowledge, a tight approach, and AI as an accelerator. You get something real to test — without cutting corners on quality.",
+    "cta": "Tell us about your project"
   },
   "process": {
     "eyebrow": "How we work",
@@ -51,24 +51,24 @@
         "step": "01",
         "timeline": "",
         "title": "Analysis",
-        "description": "Every idea deserves a digital solution. We explore your concept and figure out together the fastest path to a working result."
+        "description": "We explore your concept and map the fastest path to a working result. Scope stays sharp: one promise, one prototype."
       },
       {
         "step": "02",
         "timeline": "",
         "title": "Build + test",
-        "description": "We build in short cycles, test with real users, and steer early. With AI as an accelerator, you get something working faster without compromising on quality."
+        "description": "Short cycles, real users, early steering. AI speeds the build — quality and direction stay yours."
       },
       {
         "step": "03",
         "timeline": "",
         "title": "Go Live + support",
-        "description": "We ship your project live and stay with you for the first 30 days, optimizing where needed. Beyond that, we can continue supporting you with maintenance and keeping your digital infrastructure current—so your project always delivers the best user experience."
+        "description": "We ship live and stay for the first 30 days to optimize. After that, optional maintenance keeps your stack current and the experience sharp."
       }
     ]
   },
   "caseStudies": {
-    "eyebrow": "What we've built before",
+    "eyebrow": "What we've built",
     "viewLabel": "View case study",
     "prevLabel": "Previous cases",
     "nextLabel": "Next cases",
@@ -76,28 +76,28 @@
     "items": [
       {
         "slug": "treepin",
-        "title": "Tree inspections for Greenlightbeheer",
-        "description": "Inspectors worked with paper and GPS notes. Treepin is a tablet app (Next.js + Capacitor) with offline sync, Mapbox maps, and Supabase auth. Inspections: from €50–150 down to €10–30, clients see live insights."
+        "title": "Tree inspections — Greenlightbeheer",
+        "description": "Paper and GPS notes → Treepin tablet app (offline sync, maps, live client insights). Result: inspections from €50–150 down to €10–30."
       },
       {
         "slug": "studio-huis",
-        "title": "Website for Studio Huis",
-        "description": "A renovation advisory practice needed a clear digital presence. We built studiohuis.be: brand-first, clear services, and a low-friction contact path for homeowners."
+        "title": "Website — Studio Huis",
+        "description": "Renovation advisory needed a clear digital front door. Result: brand-first site with clear services and a low-friction contact path for homeowners (studiohuis.be)."
       },
       {
         "slug": "greenlight-beheer",
-        "title": "Website for Greenlight BV",
-        "description": "A forest, tree, and nature consultancy wanted expertise and services shown with clarity. greenlightbeheer.be positions 25 years of experience, certifications, and the Treepin ecosystem."
+        "title": "Website — Greenlight BV",
+        "description": "Forest, tree, and nature consultancy; 25 years of expertise to show with clarity. Result: greenlightbeheer.be positions services, certifications, and the Treepin ecosystem."
       },
       {
         "slug": "multiplugin",
         "title": "Multiplugin platform",
-        "description": "One-click actions in SketchUp: from box to full corpus, from a flat face to a finished door. Plus an external platform for material lists, material management, and cost calculation."
+        "description": "One-click SketchUp actions: box → corpus, flat face → finished door — plus material lists, management, and cost calculation. Result: faster detailing and less manual counting for makers."
       },
       {
         "slug": "iot-water-meters",
-        "title": "Tracking water use on construction sites",
-        "description": "Water meters were read by hand. With LoRaWAN, GPS, and a dashboard, project managers now see usage live, without walking the site."
+        "title": "Water use on construction sites",
+        "description": "Meters read by hand → LoRaWAN, GPS, and a live dashboard. Result: project managers see usage without walking the site."
       }
     ],
     "detail": {
@@ -152,7 +152,7 @@
   },
   "audiences": {
     "eyebrow": "Who it's for",
-    "intro": "Want to digitize processes? Build a themed interactive platform? Or test an idea before investing in it? Focus First is a digital accelerator that helps you get there — with the right knowledge, approach, and AI as an accelerator.",
+    "intro": "Digitizing a process? Building an interactive platform? Testing an idea before you invest? Focus First is a digital lab that gets you there — with the right knowledge, a focused approach, and AI where it actually speeds you up.",
     "examplesLabel": "Think of",
     "examples": [
       "A permitting platform",
@@ -182,32 +182,32 @@
     ]
   },
   "pricing": {
-    "eyebrow": "Clear pricing",
-    "intro": "Give every idea a chance. Focus First offers affordable solutions to reach a working result on short notice.",
+    "eyebrow": "How we price",
+    "intro": "Affordable paths to a working result — fixed scope after analysis, documented proposal included.",
     "ctaLabel": "Scope your project",
     "typeLabel": "Project type",
-    "serviceIntro": "Focus First also provides the tools to get your digital projects off the ground: domain names, hosting, databases, API integrations. After an initial analysis, you'll get a fully documented proposal on how we can bring your ideas online.",
+    "serviceIntro": "Focus First also provides hosting, domains, databases, and API integrations. After initial analysis, you get a documented proposal for bringing your idea online.",
     "priceNote": "* Price indication — a more precise estimate follows after the initial analysis.",
     "tiers": [
       {
         "name": "Basic",
         "price": "€ 3 to 5 K",
         "duration": "2–3 weeks",
-        "description": "From a simple website to a standalone automation or plugin.",
+        "description": "Simple website, standalone automation, or plugin.",
         "features": ["2–3 week turnaround", "Fixed price upfront", "Code is yours"]
       },
       {
         "name": "Digital+",
         "price": "€ 8 to 12 K",
         "duration": "6 weeks",
-        "description": "From first prototype to a fully working proof of concept.",
+        "description": "First prototype to fully working proof of concept.",
         "features": ["6 week build", "Analysis, build, and delivery", "30 days of support included"]
       },
       {
         "name": "Smart+",
         "price": "€ 15 to 25 K",
         "duration": "8 weeks",
-        "description": "Intelligent full-stack platforms with AI integration. From analysis to complete build-out.",
+        "description": "Intelligent full-stack platforms with AI or IoT. Analysis through complete build-out.",
         "features": ["8 week build", "Hardware and IoT integration", "30 days of support included"]
       }
     ]
@@ -219,7 +219,7 @@
     "principles": [
       {
         "title": "Stay focused",
-        "description": "We cut scope to what matters: one promise, one prototype, no detours. That keeps the idea sharp enough to learn from for real."
+        "description": "We cut scope to what matters: one promise, one prototype, no detours. The idea stays sharp enough to learn from for real."
       },
       {
         "title": "A chance for every idea owner",
@@ -227,11 +227,11 @@
       },
       {
         "title": "AI as an accelerator",
-        "description": "Progress in AI makes building faster achievable. That opens room for more experiments — without compromising quality or direction."
+        "description": "Progress in AI makes faster building possible. That opens room for more experiments — without compromising quality or direction."
       }
     ],
     "howWeWorkTitle": "How we work",
-    "howWeWork": "We connect databases, APIs, data platforms, and other tools into one whole. Start small, ship something working fast, then refine. Projects that grow with your needs.",
+    "howWeWork": "Databases, APIs, and tools wired into one whole. Start small, ship fast, grow with demand.",
     "howWeWorkPoints": [
       "Integrations that make tools work together",
       "Proof of concept in weeks, not months",
